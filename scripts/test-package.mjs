@@ -13,6 +13,7 @@ import { basename, dirname, join, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 
 const packageDir = resolve(dirname(fileURLToPath(import.meta.url)), "..");
+const packageVersion = JSON.parse(readFileSync(join(packageDir, "package.json"), "utf8")).version;
 const fixtureDir = mkdtempSync(join(tmpdir(), "scriptc-raylib-consumer-"));
 const sharedEnvironment = {
   ...process.env,
@@ -104,7 +105,7 @@ console.log(` + "`package-ok ${blackValue(background)} ${restored.length}`" + `)
     if (!existsSync(join(scaffoldDir, required))) throw new Error(`create command omitted ${required}`);
   }
   const scaffoldPackage = JSON.parse(readFileSync(join(scaffoldDir, "package.json"), "utf8"));
-  if (scaffoldPackage.name !== "created-game" || scaffoldPackage.devDependencies?.["scriptc-raylib"] !== "^1.0.0") {
+  if (scaffoldPackage.name !== "created-game" || scaffoldPackage.devDependencies?.["scriptc-raylib"] !== `^${packageVersion}`) {
     throw new Error("create command generated an incorrect package.json");
   }
   const scaffoldMain = readFileSync(join(scaffoldDir, "src", "main.ts"), "utf8");
