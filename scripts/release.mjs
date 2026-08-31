@@ -58,7 +58,8 @@ const ancestry = run("git", ["merge-base", "--is-ancestor", "origin/main", "HEAD
 if (ancestry.status !== 0) fail("local main is behind or diverged from origin/main; synchronize it first.");
 
 const current = manifest().version;
-const published = JSON.parse(output(npmCommand, ["view", "scriptc-raylib", "dist-tags.latest", "--json"]));
+const publishedResult = JSON.parse(output(npmCommand, ["view", "scriptc-raylib", "dist-tags.latest", "--json"]));
+const published = Array.isArray(publishedResult) ? publishedResult.at(-1) : publishedResult;
 if (current !== published) {
   fail(`local version ${current} must equal published latest ${published} before the release bump.`);
 }
