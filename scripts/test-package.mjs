@@ -53,6 +53,8 @@ function resolveInvocation(command, args) {
 try {
   mkdirSync(join(fixtureDir, "src"), { recursive: true });
   mkdirSync(join(fixtureDir, "src", "game"), { recursive: true });
+  mkdirSync(join(fixtureDir, "assets", "levels"), { recursive: true });
+  writeFileSync(join(fixtureDir, "assets", "levels", "first.txt"), "asset-in-build\n");
   run("npm", ["pack", packageDir, "--pack-destination", fixtureDir]);
   const archive = readdirSync(fixtureDir).find((file) => file.endsWith(".tgz"));
   if (!archive) throw new Error("npm pack did not create an archive");
@@ -157,6 +159,10 @@ console.log(` + "`package-ok ${blackValue(background)} ${restored.length}`" + `)
   const output = join("dist", process.platform === "win32" ? "consumer.exe" : "consumer");
   run("npx", ["--no-install", "scriptc-raylib", "build", "src/main.ts", "--dev", "-o", output]);
   const executable = join(fixtureDir, output);
+  const builtAsset = join(dirname(executable), "assets", "levels", "first.txt");
+  if (!existsSync(builtAsset) || readFileSync(builtAsset, "utf8") !== "asset-in-build\n") {
+    throw new Error("build did not copy the project assets beside the executable");
+  }
   const executed = run(executable, [], { capture: true });
   const stdout = String(executed.stdout ?? "");
   if (!stdout.includes("package-ok")) throw new Error(`unexpected consumer output: ${stdout}`);

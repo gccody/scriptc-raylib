@@ -74,7 +74,7 @@ Add convenient scripts to the consuming application's `package.json`:
 }
 ```
 
-Then use `npm run build` or `npm run dev`. The package CLI locates the correct shim, downloads and verifies raylib for the host, supplies the FFI manifest, and invokes scriptc. Do not replace this command with a bare `scriptc build`: scriptc currently cannot discover an npm package's native manifest or preserve TypeScript declaration-only FFI symbols by itself.
+Then use `npm run build` or `npm run dev`. The package CLI locates the correct shim, downloads and verifies raylib for the host, supplies the FFI manifest, invokes scriptc, and copies the project's `assets/` directory beside the executable. Do not replace this command with a bare `scriptc build`: scriptc currently cannot discover an npm package's native manifest or preserve TypeScript declaration-only FFI symbols by itself.
 
 The CLI makes a disposable source staging tree under `build/`, replacing only bare `"scriptc-raylib"` module specifiers with the package's checked-in TypeScript binding source. This is a compile-time packaging adapter, not runtime dynamic loading. Coverage tests require 100% static compilation, and `--dynamic` is never enabled.
 
@@ -169,7 +169,7 @@ npm run build:linux-x64
 npm run build:linux-arm64
 ```
 
-Target artifacts are isolated under `build/macos-universal`, `build/linux-x64`, `build/linux-arm64`, and `build/windows-x64`. Each release folder contains the executable, adjacent raylib runtime library, and `RAYLIB_LICENSE.txt`.
+Target artifacts are isolated under `build/macos-universal`, `build/linux-x64`, `build/linux-arm64`, and `build/windows-x64`. Each release folder contains the executable, adjacent raylib runtime library, `RAYLIB_LICENSE.txt`, and a copy of the project's `assets/` directory when it exists.
 
 ## Runtime footprint
 

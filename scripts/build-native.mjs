@@ -1,6 +1,7 @@
 import { createHash } from "node:crypto";
 import {
   chmodSync,
+  cpSync,
   copyFileSync,
   existsSync,
   mkdirSync,
@@ -242,6 +243,15 @@ function patchAndBundleRuntime(target, runtimeDir, executable, raylibRoot, rayli
   }
 }
 
+function bundleProjectAssets(runtimeDir) {
+  const source = join(callerDir, "assets");
+  if (!existsSync(source)) return;
+
+  const destination = join(runtimeDir, "assets");
+  if (resolve(source) === resolve(destination)) return;
+  cpSync(source, destination, { recursive: true, force: true });
+}
+
 const { optimization, target, entry, outputName, outputPath, runAfterBuild } = parseArguments();
 const raylib = await ensureRaylib(target);
 const compiler = compilerFor(target);
@@ -336,6 +346,7 @@ run(process.execPath, scriptcArguments, { env: scriptcEnvironment });
 
 const runtimeDir = dirname(executable);
 patchAndBundleRuntime(target, runtimeDir, executable, raylib.extractedRoot, raylib.runtime);
+bundleProjectAssets(runtimeDir);
 if (!targetIsWindows) chmodSync(executable, 0o755);
 
 console.log(`Built ${target} native game: ${executable}`);
