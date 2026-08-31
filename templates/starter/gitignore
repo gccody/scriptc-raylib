@@ -1,0 +1,6 @@
+node_modules/
+build/*
+!build/.gitkeep
+.vendor/
+*.ll
+*.c.tmp

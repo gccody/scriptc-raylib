@@ -1,0 +1,79 @@
+{
+  "name": "scriptc-raylib",
+  "version": "1.0.0",
+  "description": "Static native raylib bindings for TypeScript applications compiled with scriptc",
+  "homepage": "https://github.com/gccody/scriptc-raylib#readme",
+  "bugs": {
+    "url": "https://github.com/gccody/scriptc-raylib/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gccody/scriptc-raylib.git"
+  },
+  "type": "module",
+  "license": "MIT",
+  "engines": {
+    "node": ">=24"
+  },
+  "keywords": [
+    "game-development",
+    "native",
+    "raylib",
+    "scriptc",
+    "typescript"
+  ],
+  "bin": {
+    "scriptc-raylib": "scripts/cli.mjs"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/raylib.d.ts",
+      "default": "./dist/raylib.js"
+    },
+    "./binding-report.json": "./binding-report.json"
+  },
+  "files": [
+    "LICENSE",
+    "README.md",
+    "binding-report.json",
+    "ffi.json",
+    "native/**/*.c",
+    "native/**/*.h",
+    "scripts/build-native.mjs",
+    "scripts/cli.mjs",
+    "scripts/package-entry.mjs",
+    "templates/starter/**/*",
+    "src/raylib.ts",
+    "src/generated/**/*.ts",
+    "dist/**/*.js",
+    "dist/**/*.d.ts"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "generate": "node scripts/generate-binding.mjs",
+    "build:package": "node scripts/build-package.mjs",
+    "typecheck": "tsc --noEmit",
+    "test:core": "npm run generate && node --test tests/binding-contract.test.mjs && npm run typecheck && node scripts/test-native.mjs",
+    "test": "npm run test:core && npm run test:package",
+    "test:package": "node scripts/test-package.mjs",
+    "release": "node scripts/release.mjs",
+    "release:check": "node scripts/check-release.mjs",
+    "build": "npm run generate && node scripts/build-native.mjs",
+    "build:dev": "node scripts/build-native.mjs --dev",
+    "build:linux-x64": "node scripts/build-native.mjs --target linux-x64",
+    "build:linux-arm64": "node scripts/build-native.mjs --target linux-arm64",
+    "build:windows": "node scripts/build-native.mjs --target windows-x64",
+    "start": "node scripts/run-native.mjs",
+    "dev": "npm run build:dev && npm run start",
+    "prepack": "npm run generate && npm run typecheck && npm run build:package"
+  },
+  "dependencies": {
+    "scriptc": "0.0.35",
+    "typescript": "5.9.3"
+  },
+  "devDependencies": {
+    "@raylib/api": "6.0.1"
+  }
+}
