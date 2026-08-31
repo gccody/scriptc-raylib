@@ -10,6 +10,7 @@ import {
 import { tmpdir } from "node:os";
 import { basename, dirname, join, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
+import { parsePackOutput } from "./parse-pack-output.mjs";
 
 const packageDir = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const packageManifest = JSON.parse(readFileSync(join(packageDir, "package.json"), "utf8"));
@@ -61,9 +62,7 @@ try {
     { capture: true },
   );
   const packOutput = String(packed.stdout ?? "");
-  const packJsonStart = packOutput.indexOf("{");
-  if (packJsonStart < 0) throw new Error(`npm pack returned no JSON manifest:\n${packOutput}`);
-  const packResults = JSON.parse(packOutput.slice(packJsonStart));
+  const packResults = parsePackOutput(packOutput);
   const packResult = Array.isArray(packResults)
     ? packResults[0]
     : packResults[packageManifest.name] ?? Object.values(packResults)[0];
