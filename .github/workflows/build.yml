@@ -2,6 +2,8 @@ name: Cross-platform build
 
 on:
   push:
+    branches:
+      - main
   pull_request:
   workflow_dispatch:
 
@@ -25,8 +27,6 @@ jobs:
             os: windows-latest
             artifact: scriptc-raylib-windows
     runs-on: ${{ matrix.os }}
-    env:
-      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
     steps:
       - uses: actions/checkout@v6
       - uses: actions/setup-node@v7
@@ -45,7 +45,7 @@ jobs:
       - run: npm run build
       - name: Check static scriptc coverage
         run: node node_modules/scriptc/dist/bootstrap.js coverage src/main.ts --ffi ffi.json
-      - uses: actions/upload-artifact@v5
+      - uses: actions/upload-artifact@v7
         with:
           name: ${{ matrix.artifact }}
           path: |
