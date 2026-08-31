@@ -175,6 +175,16 @@ Target artifacts are isolated under `build/macos-universal`, `build/linux-x64`, 
 
 This remains a normal raylib native process; scriptc does not ship a JavaScript VM in it. A measured release demo on the current Apple M1/macOS host, after window and OpenGL initialization at 60 FPS, used about 85,392 KiB RSS (83.4 MiB) and 9.6% of one CPU core. Its application executable was 600 KiB and the adjacent universal raylib dylib was 3.4 MiB. GPU/driver allocations are not included in RSS. Windows and Linux binaries currently total roughly 2.7 MiB and 4.2 MiB respectively with their adjacent raylib libraries. Treat these as one-machine observations: resolution, drivers, loaded textures/audio, target, debug symbols, and game logic change the result.
 
+The FPS benchmarks are checkout-only development tools and are deliberately excluded from the npm package. From a repository checkout, run the TypeScript/scriptc benchmark with:
+
+```bash
+node scripts/build-native.mjs --entry src/benchmarks/uncapped-fps.ts --output-name uncapped-fps --run
+```
+
+It release-builds a 1280×720 benchmark, warms up for two seconds, then records a five-second starter-sized baseline and a five-second 1,000-rectangle-per-frame draw-call stress test. The window closes automatically and prints average FPS plus average, best, and worst frame times. No VSYNC flag is requested and `setTargetFPS(0)` disables raylib's software frame limiter. Closing the window or pressing Escape stops the benchmark early.
+
+Run `node scripts/run-c-benchmark.mjs` to follow it with the equivalent C benchmark. The C version uses the same pinned raylib library and mirrors the resolution, timing, scene, draw order, animation, and result calculations so the difference primarily measures the generated TypeScript wrappers and native FFI boundary.
+
 ## Requirements
 
 All platforms need Node.js 24+, npm, and internet access on the first build. Node runs development tooling only and is absent from the game runtime.

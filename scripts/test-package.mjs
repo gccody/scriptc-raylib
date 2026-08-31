@@ -4,7 +4,6 @@ import {
   mkdirSync,
   mkdtempSync,
   readFileSync,
-  readdirSync,
   rmSync,
   writeFileSync,
 } from "node:fs";
@@ -13,7 +12,8 @@ import { basename, dirname, join, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 
 const packageDir = resolve(dirname(fileURLToPath(import.meta.url)), "..");
-const packageVersion = JSON.parse(readFileSync(join(packageDir, "package.json"), "utf8")).version;
+const packageManifest = JSON.parse(readFileSync(join(packageDir, "package.json"), "utf8"));
+const packageVersion = packageManifest.version;
 const fixtureDir = mkdtempSync(join(tmpdir(), "scriptc-raylib-consumer-"));
 const sharedEnvironment = {
   ...process.env,
@@ -55,9 +55,47 @@ try {
   mkdirSync(join(fixtureDir, "src", "game"), { recursive: true });
   mkdirSync(join(fixtureDir, "assets", "levels"), { recursive: true });
   writeFileSync(join(fixtureDir, "assets", "levels", "first.txt"), "asset-in-build\n");
-  run("npm", ["pack", packageDir, "--pack-destination", fixtureDir]);
-  const archive = readdirSync(fixtureDir).find((file) => file.endsWith(".tgz"));
-  if (!archive) throw new Error("npm pack did not create an archive");
+  const packed = run(
+    "npm",
+    ["pack", packageDir, "--pack-destination", fixtureDir, "--json"],
+    { capture: true },
+  );
+  const packOutput = String(packed.stdout ?? "");
+  const packJsonStart = packOutput.indexOf("{");
+  if (packJsonStart < 0) throw new Error(`npm pack returned no JSON manifest:\n${packOutput}`);
+  const packResults = JSON.parse(packOutput.slice(packJsonStart));
+  const packResult = Array.isArray(packResults)
+    ? packResults[0]
+    : packResults[packageManifest.name] ?? Object.values(packResults)[0];
+  const archive = packResult?.filename;
+  if (!archive || !existsSync(join(fixtureDir, archive))) {
+    throw new Error("npm pack did not create an archive");
+  }
+
+  const productionFiles = new Set([
+    "LICENSE",
+    "README.md",
+    "binding-report.json",
+    "ffi.json",
+    "package.json",
+    "scripts/build-native.mjs",
+    "scripts/cli.mjs",
+    "scripts/package-entry.mjs",
+    "src/raylib.ts",
+  ]);
+  const productionDirectories = [
+    "dist/",
+    "native/",
+    "src/generated/",
+    "templates/starter/",
+  ];
+  const unexpectedFiles = (packResult.files ?? [])
+    .map((file) => file.path)
+    .filter((path) => !productionFiles.has(path) &&
+      !productionDirectories.some((directory) => path.startsWith(directory)));
+  if (unexpectedFiles.length > 0) {
+    throw new Error(`npm package contains non-production files: ${unexpectedFiles.join(", ")}`);
+  }
 
   writeFileSync(join(fixtureDir, "package.json"), `${JSON.stringify({
     name: "scriptc-raylib-consumer-test",
