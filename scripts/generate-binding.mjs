@@ -211,7 +211,9 @@ cLines.push(
   "  if (!present) return NULL;",
   "  if ((data == NULL && length != 0) || memchr(data, '\\0', length) != NULL) scrl_fail(\"invalid FFI string\");",
   "  char *copy = (char *)malloc(length + 1); if (!copy) scrl_fail(\"out of memory\");",
-  "  if (length) memcpy(copy, data, length); copy[length] = '\\0'; return copy;",
+  "  if (length) { memcpy(copy, data, length); }",
+  "  copy[length] = '\\0';",
+  "  return copy;",
   "}",
   "static uint32_t scrl_resource_add(ScrlResourceType type, ScrlResourceValue value, uint8_t owned) {",
   "  for (uint32_t i = 1; i < SCRL_MAX_RESOURCES; i++) if (!scrl_resources[i].active) {",
@@ -431,7 +433,10 @@ addCustomBinding(
   "uint8_t scrl_custom_load_file_data(const uint8_t *, size_t, uint8_t, void (*)(const uint8_t *, size_t, void *), void *);",
   `uint8_t scrl_custom_load_file_data(const uint8_t *name, size_t length, uint8_t present, void (*callback)(const uint8_t *, size_t, void *), void *context) {
   char *file = scrl_string_copy(name, length, present); int size = 0; unsigned char *data = LoadFileData(file, &size); free(file);
-  if (!data) return 0; callback(data, (size_t)size, context); UnloadFileData(data); return 1;
+  if (!data) return 0;
+  callback(data, (size_t)size, context);
+  UnloadFileData(data);
+  return 1;
 }`,
 );
 

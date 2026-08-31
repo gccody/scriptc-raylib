@@ -255,6 +255,8 @@ npm run release -- major
 
 The release command requires a clean `main` branch whose current version equals npm's `latest`, fetches the remote, runs the complete test suite, increments both package manifests with `npm version`, creates the matching `vX.Y.Z` Git tag, and atomically pushes `main` and the tag. Use `--dry-run` after the bump name to run every preflight without changing Git or npm.
 
+If GitHub rejects a tag before npm publishes it, fix and commit the CI failure, then run `npm run release -- retry`. It verifies that the current version is still unpublished, reruns every test, and safely moves only that failed tag to the tested fix.
+
 `.github/workflows/publish.yml` runs only for version tags. It independently rejects a tag that does not exactly match `package.json`, rejects an already-published version, runs all tests again, and publishes through short-lived GitHub OIDC credentials. A normal branch push can run CI but cannot publish an npm update.
 
 ## Adding or updating a raylib function

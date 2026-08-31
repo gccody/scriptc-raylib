@@ -5,7 +5,7 @@ import { spawnSync } from "node:child_process";
 
 const packageDir = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const npmCommand = process.platform === "win32" ? "npm.cmd" : "npm";
-const allowedBumps = new Set(["patch", "minor", "major"]);
+const allowedBumps = new Set(["patch", "minor", "major", "retry"]);
 
 function fail(message) {
   console.error(`release aborted: ${message}`);
@@ -36,13 +36,14 @@ function manifest() {
 
 const [bump, ...extra] = process.argv.slice(2);
 if (bump === "--help" || bump === "-h") {
-  console.log("Usage: npm run release -- <patch|minor|major> [--dry-run]");
+  console.log("Usage: npm run release -- <patch|minor|major|retry> [--dry-run]");
   process.exit(0);
 }
 if (!allowedBumps.has(bump) || extra.some((value) => value !== "--dry-run")) {
-  fail("usage: npm run release -- <patch|minor|major> [--dry-run]");
+  fail("usage: npm run release -- <patch|minor|major|retry> [--dry-run]");
 }
 const dryRun = extra.includes("--dry-run");
+const retry = bump === "retry";
 
 if (output("git", ["rev-parse", "--show-toplevel"]) !== packageDir) fail("run this command from the repository checkout.");
 if (output("git", ["branch", "--show-current"]) !== "main") fail("releases must be made from the main branch.");
@@ -60,18 +61,34 @@ if (ancestry.status !== 0) fail("local main is behind or diverged from origin/ma
 const current = manifest().version;
 const publishedResult = JSON.parse(output(npmCommand, ["view", "scriptc-raylib", "dist-tags.latest", "--json"]));
 const published = Array.isArray(publishedResult) ? publishedResult.at(-1) : publishedResult;
-if (current !== published) {
+if (!retry && current !== published) {
   fail(`local version ${current} must equal published latest ${published} before the release bump.`);
 }
+if (retry && current === published) fail(`${current} is already published; there is no failed release to retry.`);
+const retryTag = `v${current}`;
+if (retry) run("git", ["rev-parse", "--verify", `refs/tags/${retryTag}`]);
 
-console.log(`Running the full release suite before bumping ${current} (${bump})...`);
+console.log(retry
+  ? `Running the full release suite before retrying unpublished ${current}...`
+  : `Running the full release suite before bumping ${current} (${bump})...`);
 run(npmCommand, ["test"]);
 if (output("git", ["status", "--porcelain"]) !== "") {
   fail("tests changed generated files; review and commit those changes before releasing.");
 }
 
 if (dryRun) {
-  console.log(`Dry run passed. 'npm run release -- ${bump}' will bump, tag, and push atomically.`);
+  console.log(`Dry run passed. 'npm run release -- ${bump}' will tag and push atomically.`);
+  process.exit(0);
+}
+
+if (retry) {
+  run(process.execPath, [join(packageDir, "scripts", "check-release.mjs")], {
+    env: { ...process.env, RELEASE_TAG: retryTag },
+  });
+  run("git", ["tag", "-f", "-a", retryTag, "-m", `chore(release): ${retryTag}`, "HEAD"]);
+  console.log(`Moving unpublished ${retryTag} to the tested fix and pushing atomically.`);
+  const retried = run("git", ["push", "--atomic", "origin", "HEAD:main", `+refs/tags/${retryTag}:refs/tags/${retryTag}`], { allowFailure: true });
+  if (retried.status !== 0) fail(`retry push failed. Retry with: git push --atomic origin HEAD:main +refs/tags/${retryTag}:refs/tags/${retryTag}`);
   process.exit(0);
 }
 
