@@ -7,4 +7,4 @@ npm install
 npm run dev
 ```
 
-Edit `src/main.ts` to build your game. Use `npm run build` for a release executable and `npm run coverage` to verify that the application remains fully static.
+Edit `src/main.ts` to build your game and put game data in `assets/`. Use `npm run build` for a release executable; the build copies `assets/` beside it. Use `npm run coverage` to verify that the application remains fully static.
