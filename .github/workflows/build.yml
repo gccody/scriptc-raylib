@@ -1,0 +1,57 @@
+name: Cross-platform build
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    name: ${{ matrix.name }}
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - name: macOS
+            os: macos-latest
+            artifact: scriptc-raylib-macos
+          - name: Linux
+            os: ubuntu-latest
+            artifact: scriptc-raylib-linux
+          - name: Windows
+            os: windows-latest
+            artifact: scriptc-raylib-windows
+    runs-on: ${{ matrix.os }}
+    env:
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          cache: npm
+      - name: Install Linux build tools
+        if: runner.os == 'Linux'
+        run: sudo apt-get update && sudo apt-get install -y clang patchelf libx11-6
+      - name: Install Zig for Windows GNU target
+        if: runner.os == 'Windows'
+        shell: pwsh
+        run: choco install zig --no-progress -y
+      - run: npm ci
+      - run: npm test
+      - run: npm run build
+      - name: Check static scriptc coverage
+        run: node node_modules/scriptc/dist/bootstrap.js coverage src/main.ts --ffi ffi.json
+      - uses: actions/upload-artifact@v5
+        with:
+          name: ${{ matrix.artifact }}
+          path: |
+            build/**/scriptc-raylib*
+            build/**/libraylib*.so*
+            build/**/libraylib*.dylib
+            build/**/raylib.dll
+            build/**/RAYLIB_LICENSE.txt
+          if-no-files-found: error

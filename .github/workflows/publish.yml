@@ -1,0 +1,33 @@
+name: Publish to npm
+
+on:
+  push:
+    tags:
+      - "v*"
+
+permissions:
+  contents: read
+  id-token: write
+
+concurrency:
+  group: npm-publish-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          registry-url: https://registry.npmjs.org/
+          package-manager-cache: false
+      - name: Install native test prerequisites
+        run: sudo apt-get update && sudo apt-get install -y clang patchelf libx11-6
+      - run: npm ci
+      - name: Require a new version matching the Git tag
+        run: npm run release:check
+      - run: npm test
+      - name: Publish through npm trusted publishing
+        run: npm publish --access public

@@ -1,0 +1,8746 @@
+{
+  "ffi_format": 3,
+  "functions": [
+    {
+      "name": "nativeInitWindow",
+      "symbol": "scrl_api_InitWindow",
+      "params": [
+        "i32",
+        "i32",
+        "string",
+        "bool"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeCloseWindow",
+      "symbol": "scrl_api_CloseWindow",
+      "params": [],
+      "returns": "void"
+    },
+    {
+      "name": "nativeWindowShouldClose",
+      "symbol": "scrl_api_WindowShouldClose",
+      "params": [],
+      "returns": "bool"
+    },
+    {
+      "name": "nativeIsWindowReady",
+      "symbol": "scrl_api_IsWindowReady",
+      "params": [],
+      "returns": "bool"
+    },
+    {
+      "name": "nativeIsWindowFullscreen",
+      "symbol": "scrl_api_IsWindowFullscreen",
+      "params": [],
+      "returns": "bool"
+    },
+    {
+      "name": "nativeIsWindowHidden",
+      "symbol": "scrl_api_IsWindowHidden",
+      "params": [],
+      "returns": "bool"
+    },
+    {
+      "name": "nativeIsWindowMinimized",
+      "symbol": "scrl_api_IsWindowMinimized",
+      "params": [],
+      "returns": "bool"
+    },
+    {
+      "name": "nativeIsWindowMaximized",
+      "symbol": "scrl_api_IsWindowMaximized",
+      "params": [],
+      "returns": "bool"
+    },
+    {
+      "name": "nativeIsWindowFocused",
+      "symbol": "scrl_api_IsWindowFocused",
+      "params": [],
+      "returns": "bool"
+    },
+    {
+      "name": "nativeIsWindowResized",
+      "symbol": "scrl_api_IsWindowResized",
+      "params": [],
+      "returns": "bool"
+    },
+    {
+      "name": "nativeIsWindowState",
+      "symbol": "scrl_api_IsWindowState",
+      "params": [
+        "u32"
+      ],
+      "returns": "bool"
+    },
+    {
+      "name": "nativeSetWindowState",
+      "symbol": "scrl_api_SetWindowState",
+      "params": [
+        "u32"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeClearWindowState",
+      "symbol": "scrl_api_ClearWindowState",
+      "params": [
+        "u32"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeToggleFullscreen",
+      "symbol": "scrl_api_ToggleFullscreen",
+      "params": [],
+      "returns": "void"
+    },
+    {
+      "name": "nativeToggleBorderlessWindowed",
+      "symbol": "scrl_api_ToggleBorderlessWindowed",
+      "params": [],
+      "returns": "void"
+    },
+    {
+      "name": "nativeMaximizeWindow",
+      "symbol": "scrl_api_MaximizeWindow",
+      "params": [],
+      "returns": "void"
+    },
+    {
+      "name": "nativeMinimizeWindow",
+      "symbol": "scrl_api_MinimizeWindow",
+      "params": [],
+      "returns": "void"
+    },
+    {
+      "name": "nativeRestoreWindow",
+      "symbol": "scrl_api_RestoreWindow",
+      "params": [],
+      "returns": "void"
+    },
+    {
+      "name": "nativeSetWindowIcon",
+      "symbol": "scrl_api_SetWindowIcon",
+      "params": [
+        "u32"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeSetWindowTitle",
+      "symbol": "scrl_api_SetWindowTitle",
+      "params": [
+        "string",
+        "bool"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeSetWindowPosition",
+      "symbol": "scrl_api_SetWindowPosition",
+      "params": [
+        "i32",
+        "i32"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeSetWindowMonitor",
+      "symbol": "scrl_api_SetWindowMonitor",
+      "params": [
+        "i32"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeSetWindowMinSize",
+      "symbol": "scrl_api_SetWindowMinSize",
+      "params": [
+        "i32",
+        "i32"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeSetWindowMaxSize",
+      "symbol": "scrl_api_SetWindowMaxSize",
+      "params": [
+        "i32",
+        "i32"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeSetWindowSize",
+      "symbol": "scrl_api_SetWindowSize",
+      "params": [
+        "i32",
+        "i32"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeSetWindowOpacity",
+      "symbol": "scrl_api_SetWindowOpacity",
+      "params": [
+        "f64"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeSetWindowFocused",
+      "symbol": "scrl_api_SetWindowFocused",
+      "params": [],
+      "returns": "void"
+    },
+    {
+      "name": "nativeGetScreenWidth",
+      "symbol": "scrl_api_GetScreenWidth",
+      "params": [],
+      "returns": "i32"
+    },
+    {
+      "name": "nativeGetScreenHeight",
+      "symbol": "scrl_api_GetScreenHeight",
+      "params": [],
+      "returns": "i32"
+    },
+    {
+      "name": "nativeGetRenderWidth",
+      "symbol": "scrl_api_GetRenderWidth",
+      "params": [],
+      "returns": "i32"
+    },
+    {
+      "name": "nativeGetRenderHeight",
+      "symbol": "scrl_api_GetRenderHeight",
+      "params": [],
+      "returns": "i32"
+    },
+    {
+      "name": "nativeGetMonitorCount",
+      "symbol": "scrl_api_GetMonitorCount",
+      "params": [],
+      "returns": "i32"
+    },
+    {
+      "name": "nativeGetCurrentMonitor",
+      "symbol": "scrl_api_GetCurrentMonitor",
+      "params": [],
+      "returns": "i32"
+    },
+    {
+      "name": "nativeGetMonitorPosition",
+      "symbol": "scrl_api_GetMonitorPosition",
+      "params": [
+        "i32",
+        {
+          "callback": {
+            "id": "getMonitorPositionResult",
+            "params": [
+              "f64",
+              "f64",
+              {
+                "context": "getMonitorPositionResult"
+              }
+            ],
+            "returns": "void",
+            "lifetime": "call"
+          }
+        },
+        {
+          "context": "getMonitorPositionResult"
+        }
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeGetMonitorWidth",
+      "symbol": "scrl_api_GetMonitorWidth",
+      "params": [
+        "i32"
+      ],
+      "returns": "i32"
+    },
+    {
+      "name": "nativeGetMonitorHeight",
+      "symbol": "scrl_api_GetMonitorHeight",
+      "params": [
+        "i32"
+      ],
+      "returns": "i32"
+    },
+    {
+      "name": "nativeGetMonitorPhysicalWidth",
+      "symbol": "scrl_api_GetMonitorPhysicalWidth",
+      "params": [
+        "i32"
+      ],
+      "returns": "i32"
+    },
+    {
+      "name": "nativeGetMonitorPhysicalHeight",
+      "symbol": "scrl_api_GetMonitorPhysicalHeight",
+      "params": [
+        "i32"
+      ],
+      "returns": "i32"
+    },
+    {
+      "name": "nativeGetMonitorRefreshRate",
+      "symbol": "scrl_api_GetMonitorRefreshRate",
+      "params": [
+        "i32"
+      ],
+      "returns": "i32"
+    },
+    {
+      "name": "nativeGetWindowPosition",
+      "symbol": "scrl_api_GetWindowPosition",
+      "params": [
+        {
+          "callback": {
+            "id": "getWindowPositionResult",
+            "params": [
+              "f64",
+              "f64",
+              {
+                "context": "getWindowPositionResult"
+              }
+            ],
+            "returns": "void",
+            "lifetime": "call"
+          }
+        },
+        {
+          "context": "getWindowPositionResult"
+        }
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeGetWindowScaleDPI",
+      "symbol": "scrl_api_GetWindowScaleDPI",
+      "params": [
+        {
+          "callback": {
+            "id": "getWindowScaleDPIResult",
+            "params": [
+              "f64",
+              "f64",
+              {
+                "context": "getWindowScaleDPIResult"
+              }
+            ],
+            "returns": "void",
+            "lifetime": "call"
+          }
+        },
+        {
+          "context": "getWindowScaleDPIResult"
+        }
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeGetMonitorName",
+      "symbol": "scrl_api_GetMonitorName",
+      "params": [
+        "i32",
+        {
+          "callback": {
+            "id": "getMonitorNameResult",
+            "params": [
+              "cstring",
+              {
+                "context": "getMonitorNameResult"
+              }
+            ],
+            "returns": "void",
+            "lifetime": "call"
+          }
+        },
+        {
+          "context": "getMonitorNameResult"
+        }
+      ],
+      "returns": "bool"
+    },
+    {
+      "name": "nativeSetClipboardText",
+      "symbol": "scrl_api_SetClipboardText",
+      "params": [
+        "string",
+        "bool"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeGetClipboardText",
+      "symbol": "scrl_api_GetClipboardText",
+      "params": [
+        {
+          "callback": {
+            "id": "getClipboardTextResult",
+            "params": [
+              "cstring",
+              {
+                "context": "getClipboardTextResult"
+              }
+            ],
+            "returns": "void",
+            "lifetime": "call"
+          }
+        },
+        {
+          "context": "getClipboardTextResult"
+        }
+      ],
+      "returns": "bool"
+    },
+    {
+      "name": "nativeGetClipboardImage",
+      "symbol": "scrl_api_GetClipboardImage",
+      "params": [],
+      "returns": "u32"
+    },
+    {
+      "name": "nativeEnableEventWaiting",
+      "symbol": "scrl_api_EnableEventWaiting",
+      "params": [],
+      "returns": "void"
+    },
+    {
+      "name": "nativeDisableEventWaiting",
+      "symbol": "scrl_api_DisableEventWaiting",
+      "params": [],
+      "returns": "void"
+    },
+    {
+      "name": "nativeShowCursor",
+      "symbol": "scrl_api_ShowCursor",
+      "params": [],
+      "returns": "void"
+    },
+    {
+      "name": "nativeHideCursor",
+      "symbol": "scrl_api_HideCursor",
+      "params": [],
+      "returns": "void"
+    },
+    {
+      "name": "nativeIsCursorHidden",
+      "symbol": "scrl_api_IsCursorHidden",
+      "params": [],
+      "returns": "bool"
+    },
+    {
+      "name": "nativeEnableCursor",
+      "symbol": "scrl_api_EnableCursor",
+      "params": [],
+      "returns": "void"
+    },
+    {
+      "name": "nativeDisableCursor",
+      "symbol": "scrl_api_DisableCursor",
+      "params": [],
+      "returns": "void"
+    },
+    {
+      "name": "nativeIsCursorOnScreen",
+      "symbol": "scrl_api_IsCursorOnScreen",
+      "params": [],
+      "returns": "bool"
+    },
+    {
+      "name": "nativeClearBackground",
+      "symbol": "scrl_api_ClearBackground",
+      "params": [
+        "u8",
+        "u8",
+        "u8",
+        "u8"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeBeginDrawing",
+      "symbol": "scrl_api_BeginDrawing",
+      "params": [],
+      "returns": "void"
+    },
+    {
+      "name": "nativeEndDrawing",
+      "symbol": "scrl_api_EndDrawing",
+      "params": [],
+      "returns": "void"
+    },
+    {
+      "name": "nativeBeginMode2D",
+      "symbol": "scrl_api_BeginMode2D",
+      "params": [
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeEndMode2D",
+      "symbol": "scrl_api_EndMode2D",
+      "params": [],
+      "returns": "void"
+    },
+    {
+      "name": "nativeBeginMode3D",
+      "symbol": "scrl_api_BeginMode3D",
+      "params": [
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "i32"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeEndMode3D",
+      "symbol": "scrl_api_EndMode3D",
+      "params": [],
+      "returns": "void"
+    },
+    {
+      "name": "nativeBeginTextureMode",
+      "symbol": "scrl_api_BeginTextureMode",
+      "params": [
+        "u32"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeEndTextureMode",
+      "symbol": "scrl_api_EndTextureMode",
+      "params": [],
+      "returns": "void"
+    },
+    {
+      "name": "nativeBeginShaderMode",
+      "symbol": "scrl_api_BeginShaderMode",
+      "params": [
+        "u32"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeEndShaderMode",
+      "symbol": "scrl_api_EndShaderMode",
+      "params": [],
+      "returns": "void"
+    },
+    {
+      "name": "nativeBeginBlendMode",
+      "symbol": "scrl_api_BeginBlendMode",
+      "params": [
+        "i32"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeEndBlendMode",
+      "symbol": "scrl_api_EndBlendMode",
+      "params": [],
+      "returns": "void"
+    },
+    {
+      "name": "nativeBeginScissorMode",
+      "symbol": "scrl_api_BeginScissorMode",
+      "params": [
+        "i32",
+        "i32",
+        "i32",
+        "i32"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeEndScissorMode",
+      "symbol": "scrl_api_EndScissorMode",
+      "params": [],
+      "returns": "void"
+    },
+    {
+      "name": "nativeBeginVrStereoMode",
+      "symbol": "scrl_api_BeginVrStereoMode",
+      "params": [
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeEndVrStereoMode",
+      "symbol": "scrl_api_EndVrStereoMode",
+      "params": [],
+      "returns": "void"
+    },
+    {
+      "name": "nativeLoadVrStereoConfig",
+      "symbol": "scrl_api_LoadVrStereoConfig",
+      "params": [
+        "i32",
+        "i32",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        {
+          "callback": {
+            "id": "loadVrStereoConfigResult",
+            "params": [
+              "f64",
+              "f64",
+              "f64",
+              "f64",
+              "f64",
+              "f64",
+              "f64",
+              "f64",
+              "f64",
+              "f64",
+              "f64",
+              "f64",
+              "f64",
+              "f64",
+              "f64",
+              "f64",
+              "f64",
+              "f64",
+              "f64",
+              "f64",
+              "f64",
+              "f64",
+              "f64",
+              "f64",
+              "f64",
+              "f64",
+              "f64",
+              "f64",
+              "f64",
+              "f64",
+              "f64",
+              "f64",
+              "f64",
+              "f64",
+              "f64",
+              "f64",
+              "f64",
+              "f64",
+              "f64",
+              "f64",
+              "f64",
+              "f64",
+              "f64",
+              "f64",
+              "f64",
+              "f64",
+              "f64",
+              "f64",
+              "f64",
+              "f64",
+              "f64",
+              "f64",
+              "f64",
+              "f64",
+              "f64",
+              "f64",
+              "f64",
+              "f64",
+              "f64",
+              "f64",
+              "f64",
+              "f64",
+              "f64",
+              "f64",
+              "f64",
+              "f64",
+              "f64",
+              "f64",
+              "f64",
+              "f64",
+              "f64",
+              "f64",
+              "f64",
+              "f64",
+              "f64",
+              "f64",
+              {
+                "context": "loadVrStereoConfigResult"
+              }
+            ],
+            "returns": "void",
+            "lifetime": "call"
+          }
+        },
+        {
+          "context": "loadVrStereoConfigResult"
+        }
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeUnloadVrStereoConfig",
+      "symbol": "scrl_api_UnloadVrStereoConfig",
+      "params": [
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeLoadShader",
+      "symbol": "scrl_api_LoadShader",
+      "params": [
+        "string",
+        "bool",
+        "string",
+        "bool"
+      ],
+      "returns": "u32"
+    },
+    {
+      "name": "nativeLoadShaderFromMemory",
+      "symbol": "scrl_api_LoadShaderFromMemory",
+      "params": [
+        "string",
+        "bool",
+        "string",
+        "bool"
+      ],
+      "returns": "u32"
+    },
+    {
+      "name": "nativeIsShaderValid",
+      "symbol": "scrl_api_IsShaderValid",
+      "params": [
+        "u32"
+      ],
+      "returns": "bool"
+    },
+    {
+      "name": "nativeGetShaderLocation",
+      "symbol": "scrl_api_GetShaderLocation",
+      "params": [
+        "u32",
+        "string",
+        "bool"
+      ],
+      "returns": "i32"
+    },
+    {
+      "name": "nativeGetShaderLocationAttrib",
+      "symbol": "scrl_api_GetShaderLocationAttrib",
+      "params": [
+        "u32",
+        "string",
+        "bool"
+      ],
+      "returns": "i32"
+    },
+    {
+      "name": "nativeSetShaderValue",
+      "symbol": "scrl_api_SetShaderValue",
+      "params": [
+        "u32",
+        "i32",
+        "bytes",
+        "i32"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeSetShaderValueV",
+      "symbol": "scrl_api_SetShaderValueV",
+      "params": [
+        "u32",
+        "i32",
+        "bytes",
+        "i32",
+        "i32"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeSetShaderValueMatrix",
+      "symbol": "scrl_api_SetShaderValueMatrix",
+      "params": [
+        "u32",
+        "i32",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeSetShaderValueTexture",
+      "symbol": "scrl_api_SetShaderValueTexture",
+      "params": [
+        "u32",
+        "i32",
+        "u32"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeUnloadShader",
+      "symbol": "scrl_api_UnloadShader",
+      "params": [
+        "u32"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeGetScreenToWorldRay",
+      "symbol": "scrl_api_GetScreenToWorldRay",
+      "params": [
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "i32",
+        {
+          "callback": {
+            "id": "getScreenToWorldRayResult",
+            "params": [
+              "f64",
+              "f64",
+              "f64",
+              "f64",
+              "f64",
+              "f64",
+              {
+                "context": "getScreenToWorldRayResult"
+              }
+            ],
+            "returns": "void",
+            "lifetime": "call"
+          }
+        },
+        {
+          "context": "getScreenToWorldRayResult"
+        }
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeGetScreenToWorldRayEx",
+      "symbol": "scrl_api_GetScreenToWorldRayEx",
+      "params": [
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "i32",
+        "i32",
+        "i32",
+        {
+          "callback": {
+            "id": "getScreenToWorldRayExResult",
+            "params": [
+              "f64",
+              "f64",
+              "f64",
+              "f64",
+              "f64",
+              "f64",
+              {
+                "context": "getScreenToWorldRayExResult"
+              }
+            ],
+            "returns": "void",
+            "lifetime": "call"
+          }
+        },
+        {
+          "context": "getScreenToWorldRayExResult"
+        }
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeGetWorldToScreen",
+      "symbol": "scrl_api_GetWorldToScreen",
+      "params": [
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "i32",
+        {
+          "callback": {
+            "id": "getWorldToScreenResult",
+            "params": [
+              "f64",
+              "f64",
+              {
+                "context": "getWorldToScreenResult"
+              }
+            ],
+            "returns": "void",
+            "lifetime": "call"
+          }
+        },
+        {
+          "context": "getWorldToScreenResult"
+        }
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeGetWorldToScreenEx",
+      "symbol": "scrl_api_GetWorldToScreenEx",
+      "params": [
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "i32",
+        "i32",
+        "i32",
+        {
+          "callback": {
+            "id": "getWorldToScreenExResult",
+            "params": [
+              "f64",
+              "f64",
+              {
+                "context": "getWorldToScreenExResult"
+              }
+            ],
+            "returns": "void",
+            "lifetime": "call"
+          }
+        },
+        {
+          "context": "getWorldToScreenExResult"
+        }
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeGetWorldToScreen2D",
+      "symbol": "scrl_api_GetWorldToScreen2D",
+      "params": [
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        {
+          "callback": {
+            "id": "getWorldToScreen2DResult",
+            "params": [
+              "f64",
+              "f64",
+              {
+                "context": "getWorldToScreen2DResult"
+              }
+            ],
+            "returns": "void",
+            "lifetime": "call"
+          }
+        },
+        {
+          "context": "getWorldToScreen2DResult"
+        }
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeGetScreenToWorld2D",
+      "symbol": "scrl_api_GetScreenToWorld2D",
+      "params": [
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        {
+          "callback": {
+            "id": "getScreenToWorld2DResult",
+            "params": [
+              "f64",
+              "f64",
+              {
+                "context": "getScreenToWorld2DResult"
+              }
+            ],
+            "returns": "void",
+            "lifetime": "call"
+          }
+        },
+        {
+          "context": "getScreenToWorld2DResult"
+        }
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeGetCameraMatrix",
+      "symbol": "scrl_api_GetCameraMatrix",
+      "params": [
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "i32",
+        {
+          "callback": {
+            "id": "getCameraMatrixResult",
+            "params": [
+              "f64",
+              "f64",
+              "f64",
+              "f64",
+              "f64",
+              "f64",
+              "f64",
+              "f64",
+              "f64",
+              "f64",
+              "f64",
+              "f64",
+              "f64",
+              "f64",
+              "f64",
+              "f64",
+              {
+                "context": "getCameraMatrixResult"
+              }
+            ],
+            "returns": "void",
+            "lifetime": "call"
+          }
+        },
+        {
+          "context": "getCameraMatrixResult"
+        }
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeGetCameraMatrix2D",
+      "symbol": "scrl_api_GetCameraMatrix2D",
+      "params": [
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        {
+          "callback": {
+            "id": "getCameraMatrix2DResult",
+            "params": [
+              "f64",
+              "f64",
+              "f64",
+              "f64",
+              "f64",
+              "f64",
+              "f64",
+              "f64",
+              "f64",
+              "f64",
+              "f64",
+              "f64",
+              "f64",
+              "f64",
+              "f64",
+              "f64",
+              {
+                "context": "getCameraMatrix2DResult"
+              }
+            ],
+            "returns": "void",
+            "lifetime": "call"
+          }
+        },
+        {
+          "context": "getCameraMatrix2DResult"
+        }
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeSetTargetFPS",
+      "symbol": "scrl_api_SetTargetFPS",
+      "params": [
+        "i32"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeGetFrameTime",
+      "symbol": "scrl_api_GetFrameTime",
+      "params": [],
+      "returns": "f64"
+    },
+    {
+      "name": "nativeGetTime",
+      "symbol": "scrl_api_GetTime",
+      "params": [],
+      "returns": "f64"
+    },
+    {
+      "name": "nativeGetFPS",
+      "symbol": "scrl_api_GetFPS",
+      "params": [],
+      "returns": "i32"
+    },
+    {
+      "name": "nativeSwapScreenBuffer",
+      "symbol": "scrl_api_SwapScreenBuffer",
+      "params": [],
+      "returns": "void"
+    },
+    {
+      "name": "nativePollInputEvents",
+      "symbol": "scrl_api_PollInputEvents",
+      "params": [],
+      "returns": "void"
+    },
+    {
+      "name": "nativeWaitTime",
+      "symbol": "scrl_api_WaitTime",
+      "params": [
+        "f64"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeSetRandomSeed",
+      "symbol": "scrl_api_SetRandomSeed",
+      "params": [
+        "u32"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeGetRandomValue",
+      "symbol": "scrl_api_GetRandomValue",
+      "params": [
+        "i32",
+        "i32"
+      ],
+      "returns": "i32"
+    },
+    {
+      "name": "nativeTakeScreenshot",
+      "symbol": "scrl_api_TakeScreenshot",
+      "params": [
+        "string",
+        "bool"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeSetConfigFlags",
+      "symbol": "scrl_api_SetConfigFlags",
+      "params": [
+        "u32"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeOpenURL",
+      "symbol": "scrl_api_OpenURL",
+      "params": [
+        "string",
+        "bool"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeSetTraceLogLevel",
+      "symbol": "scrl_api_SetTraceLogLevel",
+      "params": [
+        "i32"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeSaveFileData",
+      "symbol": "scrl_api_SaveFileData",
+      "params": [
+        "string",
+        "bool",
+        "bytes",
+        "i32"
+      ],
+      "returns": "bool"
+    },
+    {
+      "name": "nativeExportDataAsCode",
+      "symbol": "scrl_api_ExportDataAsCode",
+      "params": [
+        "bytes",
+        "i32",
+        "string",
+        "bool"
+      ],
+      "returns": "bool"
+    },
+    {
+      "name": "nativeLoadFileText",
+      "symbol": "scrl_api_LoadFileText",
+      "params": [
+        "string",
+        "bool",
+        {
+          "callback": {
+            "id": "loadFileTextResult",
+            "params": [
+              "cstring",
+              {
+                "context": "loadFileTextResult"
+              }
+            ],
+            "returns": "void",
+            "lifetime": "call"
+          }
+        },
+        {
+          "context": "loadFileTextResult"
+        }
+      ],
+      "returns": "bool"
+    },
+    {
+      "name": "nativeSaveFileText",
+      "symbol": "scrl_api_SaveFileText",
+      "params": [
+        "string",
+        "bool",
+        "string",
+        "bool"
+      ],
+      "returns": "bool"
+    },
+    {
+      "name": "nativeFileRename",
+      "symbol": "scrl_api_FileRename",
+      "params": [
+        "string",
+        "bool",
+        "string",
+        "bool"
+      ],
+      "returns": "i32"
+    },
+    {
+      "name": "nativeFileRemove",
+      "symbol": "scrl_api_FileRemove",
+      "params": [
+        "string",
+        "bool"
+      ],
+      "returns": "i32"
+    },
+    {
+      "name": "nativeFileCopy",
+      "symbol": "scrl_api_FileCopy",
+      "params": [
+        "string",
+        "bool",
+        "string",
+        "bool"
+      ],
+      "returns": "i32"
+    },
+    {
+      "name": "nativeFileMove",
+      "symbol": "scrl_api_FileMove",
+      "params": [
+        "string",
+        "bool",
+        "string",
+        "bool"
+      ],
+      "returns": "i32"
+    },
+    {
+      "name": "nativeFileTextReplace",
+      "symbol": "scrl_api_FileTextReplace",
+      "params": [
+        "string",
+        "bool",
+        "string",
+        "bool",
+        "string",
+        "bool"
+      ],
+      "returns": "i32"
+    },
+    {
+      "name": "nativeFileTextFindIndex",
+      "symbol": "scrl_api_FileTextFindIndex",
+      "params": [
+        "string",
+        "bool",
+        "string",
+        "bool"
+      ],
+      "returns": "i32"
+    },
+    {
+      "name": "nativeFileExists",
+      "symbol": "scrl_api_FileExists",
+      "params": [
+        "string",
+        "bool"
+      ],
+      "returns": "bool"
+    },
+    {
+      "name": "nativeDirectoryExists",
+      "symbol": "scrl_api_DirectoryExists",
+      "params": [
+        "string",
+        "bool"
+      ],
+      "returns": "bool"
+    },
+    {
+      "name": "nativeIsFileExtension",
+      "symbol": "scrl_api_IsFileExtension",
+      "params": [
+        "string",
+        "bool",
+        "string",
+        "bool"
+      ],
+      "returns": "bool"
+    },
+    {
+      "name": "nativeGetFileLength",
+      "symbol": "scrl_api_GetFileLength",
+      "params": [
+        "string",
+        "bool"
+      ],
+      "returns": "i32"
+    },
+    {
+      "name": "nativeGetFileModTime",
+      "symbol": "scrl_api_GetFileModTime",
+      "params": [
+        "string",
+        "bool"
+      ],
+      "returns": "f64"
+    },
+    {
+      "name": "nativeGetFileExtension",
+      "symbol": "scrl_api_GetFileExtension",
+      "params": [
+        "string",
+        "bool",
+        {
+          "callback": {
+            "id": "getFileExtensionResult",
+            "params": [
+              "cstring",
+              {
+                "context": "getFileExtensionResult"
+              }
+            ],
+            "returns": "void",
+            "lifetime": "call"
+          }
+        },
+        {
+          "context": "getFileExtensionResult"
+        }
+      ],
+      "returns": "bool"
+    },
+    {
+      "name": "nativeGetFileName",
+      "symbol": "scrl_api_GetFileName",
+      "params": [
+        "string",
+        "bool",
+        {
+          "callback": {
+            "id": "getFileNameResult",
+            "params": [
+              "cstring",
+              {
+                "context": "getFileNameResult"
+              }
+            ],
+            "returns": "void",
+            "lifetime": "call"
+          }
+        },
+        {
+          "context": "getFileNameResult"
+        }
+      ],
+      "returns": "bool"
+    },
+    {
+      "name": "nativeGetFileNameWithoutExt",
+      "symbol": "scrl_api_GetFileNameWithoutExt",
+      "params": [
+        "string",
+        "bool",
+        {
+          "callback": {
+            "id": "getFileNameWithoutExtResult",
+            "params": [
+              "cstring",
+              {
+                "context": "getFileNameWithoutExtResult"
+              }
+            ],
+            "returns": "void",
+            "lifetime": "call"
+          }
+        },
+        {
+          "context": "getFileNameWithoutExtResult"
+        }
+      ],
+      "returns": "bool"
+    },
+    {
+      "name": "nativeGetDirectoryPath",
+      "symbol": "scrl_api_GetDirectoryPath",
+      "params": [
+        "string",
+        "bool",
+        {
+          "callback": {
+            "id": "getDirectoryPathResult",
+            "params": [
+              "cstring",
+              {
+                "context": "getDirectoryPathResult"
+              }
+            ],
+            "returns": "void",
+            "lifetime": "call"
+          }
+        },
+        {
+          "context": "getDirectoryPathResult"
+        }
+      ],
+      "returns": "bool"
+    },
+    {
+      "name": "nativeGetPrevDirectoryPath",
+      "symbol": "scrl_api_GetPrevDirectoryPath",
+      "params": [
+        "string",
+        "bool",
+        {
+          "callback": {
+            "id": "getPrevDirectoryPathResult",
+            "params": [
+              "cstring",
+              {
+                "context": "getPrevDirectoryPathResult"
+              }
+            ],
+            "returns": "void",
+            "lifetime": "call"
+          }
+        },
+        {
+          "context": "getPrevDirectoryPathResult"
+        }
+      ],
+      "returns": "bool"
+    },
+    {
+      "name": "nativeGetWorkingDirectory",
+      "symbol": "scrl_api_GetWorkingDirectory",
+      "params": [
+        {
+          "callback": {
+            "id": "getWorkingDirectoryResult",
+            "params": [
+              "cstring",
+              {
+                "context": "getWorkingDirectoryResult"
+              }
+            ],
+            "returns": "void",
+            "lifetime": "call"
+          }
+        },
+        {
+          "context": "getWorkingDirectoryResult"
+        }
+      ],
+      "returns": "bool"
+    },
+    {
+      "name": "nativeGetApplicationDirectory",
+      "symbol": "scrl_api_GetApplicationDirectory",
+      "params": [
+        {
+          "callback": {
+            "id": "getApplicationDirectoryResult",
+            "params": [
+              "cstring",
+              {
+                "context": "getApplicationDirectoryResult"
+              }
+            ],
+            "returns": "void",
+            "lifetime": "call"
+          }
+        },
+        {
+          "context": "getApplicationDirectoryResult"
+        }
+      ],
+      "returns": "bool"
+    },
+    {
+      "name": "nativeMakeDirectory",
+      "symbol": "scrl_api_MakeDirectory",
+      "params": [
+        "string",
+        "bool"
+      ],
+      "returns": "i32"
+    },
+    {
+      "name": "nativeChangeDirectory",
+      "symbol": "scrl_api_ChangeDirectory",
+      "params": [
+        "string",
+        "bool"
+      ],
+      "returns": "bool"
+    },
+    {
+      "name": "nativeIsPathFile",
+      "symbol": "scrl_api_IsPathFile",
+      "params": [
+        "string",
+        "bool"
+      ],
+      "returns": "bool"
+    },
+    {
+      "name": "nativeIsFileNameValid",
+      "symbol": "scrl_api_IsFileNameValid",
+      "params": [
+        "string",
+        "bool"
+      ],
+      "returns": "bool"
+    },
+    {
+      "name": "nativeLoadDirectoryFiles",
+      "symbol": "scrl_api_LoadDirectoryFiles",
+      "params": [
+        "string",
+        "bool"
+      ],
+      "returns": "u32"
+    },
+    {
+      "name": "nativeLoadDirectoryFilesEx",
+      "symbol": "scrl_api_LoadDirectoryFilesEx",
+      "params": [
+        "string",
+        "bool",
+        "string",
+        "bool",
+        "bool"
+      ],
+      "returns": "u32"
+    },
+    {
+      "name": "nativeUnloadDirectoryFiles",
+      "symbol": "scrl_api_UnloadDirectoryFiles",
+      "params": [
+        "u32"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeIsFileDropped",
+      "symbol": "scrl_api_IsFileDropped",
+      "params": [],
+      "returns": "bool"
+    },
+    {
+      "name": "nativeLoadDroppedFiles",
+      "symbol": "scrl_api_LoadDroppedFiles",
+      "params": [],
+      "returns": "u32"
+    },
+    {
+      "name": "nativeUnloadDroppedFiles",
+      "symbol": "scrl_api_UnloadDroppedFiles",
+      "params": [
+        "u32"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeGetDirectoryFileCount",
+      "symbol": "scrl_api_GetDirectoryFileCount",
+      "params": [
+        "string",
+        "bool"
+      ],
+      "returns": "u32"
+    },
+    {
+      "name": "nativeGetDirectoryFileCountEx",
+      "symbol": "scrl_api_GetDirectoryFileCountEx",
+      "params": [
+        "string",
+        "bool",
+        "string",
+        "bool",
+        "bool"
+      ],
+      "returns": "u32"
+    },
+    {
+      "name": "nativeComputeCRC32",
+      "symbol": "scrl_api_ComputeCRC32",
+      "params": [
+        "bytes",
+        "i32"
+      ],
+      "returns": "u32"
+    },
+    {
+      "name": "nativeLoadAutomationEventList",
+      "symbol": "scrl_api_LoadAutomationEventList",
+      "params": [
+        "string",
+        "bool"
+      ],
+      "returns": "u32"
+    },
+    {
+      "name": "nativeUnloadAutomationEventList",
+      "symbol": "scrl_api_UnloadAutomationEventList",
+      "params": [
+        "u32"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeExportAutomationEventList",
+      "symbol": "scrl_api_ExportAutomationEventList",
+      "params": [
+        "u32",
+        "string",
+        "bool"
+      ],
+      "returns": "bool"
+    },
+    {
+      "name": "nativeSetAutomationEventList",
+      "symbol": "scrl_api_SetAutomationEventList",
+      "params": [
+        "u32"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeSetAutomationEventBaseFrame",
+      "symbol": "scrl_api_SetAutomationEventBaseFrame",
+      "params": [
+        "i32"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeStartAutomationEventRecording",
+      "symbol": "scrl_api_StartAutomationEventRecording",
+      "params": [],
+      "returns": "void"
+    },
+    {
+      "name": "nativeStopAutomationEventRecording",
+      "symbol": "scrl_api_StopAutomationEventRecording",
+      "params": [],
+      "returns": "void"
+    },
+    {
+      "name": "nativePlayAutomationEvent",
+      "symbol": "scrl_api_PlayAutomationEvent",
+      "params": [
+        "u32",
+        "u32",
+        "i32",
+        "i32",
+        "i32",
+        "i32"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeIsKeyPressed",
+      "symbol": "scrl_api_IsKeyPressed",
+      "params": [
+        "i32"
+      ],
+      "returns": "bool"
+    },
+    {
+      "name": "nativeIsKeyPressedRepeat",
+      "symbol": "scrl_api_IsKeyPressedRepeat",
+      "params": [
+        "i32"
+      ],
+      "returns": "bool"
+    },
+    {
+      "name": "nativeIsKeyDown",
+      "symbol": "scrl_api_IsKeyDown",
+      "params": [
+        "i32"
+      ],
+      "returns": "bool"
+    },
+    {
+      "name": "nativeIsKeyReleased",
+      "symbol": "scrl_api_IsKeyReleased",
+      "params": [
+        "i32"
+      ],
+      "returns": "bool"
+    },
+    {
+      "name": "nativeIsKeyUp",
+      "symbol": "scrl_api_IsKeyUp",
+      "params": [
+        "i32"
+      ],
+      "returns": "bool"
+    },
+    {
+      "name": "nativeGetKeyPressed",
+      "symbol": "scrl_api_GetKeyPressed",
+      "params": [],
+      "returns": "i32"
+    },
+    {
+      "name": "nativeGetCharPressed",
+      "symbol": "scrl_api_GetCharPressed",
+      "params": [],
+      "returns": "i32"
+    },
+    {
+      "name": "nativeGetKeyName",
+      "symbol": "scrl_api_GetKeyName",
+      "params": [
+        "i32",
+        {
+          "callback": {
+            "id": "getKeyNameResult",
+            "params": [
+              "cstring",
+              {
+                "context": "getKeyNameResult"
+              }
+            ],
+            "returns": "void",
+            "lifetime": "call"
+          }
+        },
+        {
+          "context": "getKeyNameResult"
+        }
+      ],
+      "returns": "bool"
+    },
+    {
+      "name": "nativeSetExitKey",
+      "symbol": "scrl_api_SetExitKey",
+      "params": [
+        "i32"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeIsGamepadAvailable",
+      "symbol": "scrl_api_IsGamepadAvailable",
+      "params": [
+        "i32"
+      ],
+      "returns": "bool"
+    },
+    {
+      "name": "nativeGetGamepadName",
+      "symbol": "scrl_api_GetGamepadName",
+      "params": [
+        "i32",
+        {
+          "callback": {
+            "id": "getGamepadNameResult",
+            "params": [
+              "cstring",
+              {
+                "context": "getGamepadNameResult"
+              }
+            ],
+            "returns": "void",
+            "lifetime": "call"
+          }
+        },
+        {
+          "context": "getGamepadNameResult"
+        }
+      ],
+      "returns": "bool"
+    },
+    {
+      "name": "nativeIsGamepadButtonPressed",
+      "symbol": "scrl_api_IsGamepadButtonPressed",
+      "params": [
+        "i32",
+        "i32"
+      ],
+      "returns": "bool"
+    },
+    {
+      "name": "nativeIsGamepadButtonDown",
+      "symbol": "scrl_api_IsGamepadButtonDown",
+      "params": [
+        "i32",
+        "i32"
+      ],
+      "returns": "bool"
+    },
+    {
+      "name": "nativeIsGamepadButtonReleased",
+      "symbol": "scrl_api_IsGamepadButtonReleased",
+      "params": [
+        "i32",
+        "i32"
+      ],
+      "returns": "bool"
+    },
+    {
+      "name": "nativeIsGamepadButtonUp",
+      "symbol": "scrl_api_IsGamepadButtonUp",
+      "params": [
+        "i32",
+        "i32"
+      ],
+      "returns": "bool"
+    },
+    {
+      "name": "nativeGetGamepadButtonPressed",
+      "symbol": "scrl_api_GetGamepadButtonPressed",
+      "params": [],
+      "returns": "i32"
+    },
+    {
+      "name": "nativeGetGamepadAxisCount",
+      "symbol": "scrl_api_GetGamepadAxisCount",
+      "params": [
+        "i32"
+      ],
+      "returns": "i32"
+    },
+    {
+      "name": "nativeGetGamepadAxisMovement",
+      "symbol": "scrl_api_GetGamepadAxisMovement",
+      "params": [
+        "i32",
+        "i32"
+      ],
+      "returns": "f64"
+    },
+    {
+      "name": "nativeSetGamepadMappings",
+      "symbol": "scrl_api_SetGamepadMappings",
+      "params": [
+        "string",
+        "bool"
+      ],
+      "returns": "i32"
+    },
+    {
+      "name": "nativeSetGamepadVibration",
+      "symbol": "scrl_api_SetGamepadVibration",
+      "params": [
+        "i32",
+        "f64",
+        "f64",
+        "f64"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeIsMouseButtonPressed",
+      "symbol": "scrl_api_IsMouseButtonPressed",
+      "params": [
+        "i32"
+      ],
+      "returns": "bool"
+    },
+    {
+      "name": "nativeIsMouseButtonDown",
+      "symbol": "scrl_api_IsMouseButtonDown",
+      "params": [
+        "i32"
+      ],
+      "returns": "bool"
+    },
+    {
+      "name": "nativeIsMouseButtonReleased",
+      "symbol": "scrl_api_IsMouseButtonReleased",
+      "params": [
+        "i32"
+      ],
+      "returns": "bool"
+    },
+    {
+      "name": "nativeIsMouseButtonUp",
+      "symbol": "scrl_api_IsMouseButtonUp",
+      "params": [
+        "i32"
+      ],
+      "returns": "bool"
+    },
+    {
+      "name": "nativeGetMouseX",
+      "symbol": "scrl_api_GetMouseX",
+      "params": [],
+      "returns": "i32"
+    },
+    {
+      "name": "nativeGetMouseY",
+      "symbol": "scrl_api_GetMouseY",
+      "params": [],
+      "returns": "i32"
+    },
+    {
+      "name": "nativeGetMousePosition",
+      "symbol": "scrl_api_GetMousePosition",
+      "params": [
+        {
+          "callback": {
+            "id": "getMousePositionResult",
+            "params": [
+              "f64",
+              "f64",
+              {
+                "context": "getMousePositionResult"
+              }
+            ],
+            "returns": "void",
+            "lifetime": "call"
+          }
+        },
+        {
+          "context": "getMousePositionResult"
+        }
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeGetMouseDelta",
+      "symbol": "scrl_api_GetMouseDelta",
+      "params": [
+        {
+          "callback": {
+            "id": "getMouseDeltaResult",
+            "params": [
+              "f64",
+              "f64",
+              {
+                "context": "getMouseDeltaResult"
+              }
+            ],
+            "returns": "void",
+            "lifetime": "call"
+          }
+        },
+        {
+          "context": "getMouseDeltaResult"
+        }
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeSetMousePosition",
+      "symbol": "scrl_api_SetMousePosition",
+      "params": [
+        "i32",
+        "i32"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeSetMouseOffset",
+      "symbol": "scrl_api_SetMouseOffset",
+      "params": [
+        "i32",
+        "i32"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeSetMouseScale",
+      "symbol": "scrl_api_SetMouseScale",
+      "params": [
+        "f64",
+        "f64"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeGetMouseWheelMove",
+      "symbol": "scrl_api_GetMouseWheelMove",
+      "params": [],
+      "returns": "f64"
+    },
+    {
+      "name": "nativeGetMouseWheelMoveV",
+      "symbol": "scrl_api_GetMouseWheelMoveV",
+      "params": [
+        {
+          "callback": {
+            "id": "getMouseWheelMoveVResult",
+            "params": [
+              "f64",
+              "f64",
+              {
+                "context": "getMouseWheelMoveVResult"
+              }
+            ],
+            "returns": "void",
+            "lifetime": "call"
+          }
+        },
+        {
+          "context": "getMouseWheelMoveVResult"
+        }
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeSetMouseCursor",
+      "symbol": "scrl_api_SetMouseCursor",
+      "params": [
+        "i32"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeGetTouchX",
+      "symbol": "scrl_api_GetTouchX",
+      "params": [],
+      "returns": "i32"
+    },
+    {
+      "name": "nativeGetTouchY",
+      "symbol": "scrl_api_GetTouchY",
+      "params": [],
+      "returns": "i32"
+    },
+    {
+      "name": "nativeGetTouchPosition",
+      "symbol": "scrl_api_GetTouchPosition",
+      "params": [
+        "i32",
+        {
+          "callback": {
+            "id": "getTouchPositionResult",
+            "params": [
+              "f64",
+              "f64",
+              {
+                "context": "getTouchPositionResult"
+              }
+            ],
+            "returns": "void",
+            "lifetime": "call"
+          }
+        },
+        {
+          "context": "getTouchPositionResult"
+        }
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeGetTouchPointId",
+      "symbol": "scrl_api_GetTouchPointId",
+      "params": [
+        "i32"
+      ],
+      "returns": "i32"
+    },
+    {
+      "name": "nativeGetTouchPointCount",
+      "symbol": "scrl_api_GetTouchPointCount",
+      "params": [],
+      "returns": "i32"
+    },
+    {
+      "name": "nativeSetGesturesEnabled",
+      "symbol": "scrl_api_SetGesturesEnabled",
+      "params": [
+        "u32"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeIsGestureDetected",
+      "symbol": "scrl_api_IsGestureDetected",
+      "params": [
+        "u32"
+      ],
+      "returns": "bool"
+    },
+    {
+      "name": "nativeGetGestureDetected",
+      "symbol": "scrl_api_GetGestureDetected",
+      "params": [],
+      "returns": "i32"
+    },
+    {
+      "name": "nativeGetGestureHoldDuration",
+      "symbol": "scrl_api_GetGestureHoldDuration",
+      "params": [],
+      "returns": "f64"
+    },
+    {
+      "name": "nativeGetGestureDragVector",
+      "symbol": "scrl_api_GetGestureDragVector",
+      "params": [
+        {
+          "callback": {
+            "id": "getGestureDragVectorResult",
+            "params": [
+              "f64",
+              "f64",
+              {
+                "context": "getGestureDragVectorResult"
+              }
+            ],
+            "returns": "void",
+            "lifetime": "call"
+          }
+        },
+        {
+          "context": "getGestureDragVectorResult"
+        }
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeGetGestureDragAngle",
+      "symbol": "scrl_api_GetGestureDragAngle",
+      "params": [],
+      "returns": "f64"
+    },
+    {
+      "name": "nativeGetGesturePinchVector",
+      "symbol": "scrl_api_GetGesturePinchVector",
+      "params": [
+        {
+          "callback": {
+            "id": "getGesturePinchVectorResult",
+            "params": [
+              "f64",
+              "f64",
+              {
+                "context": "getGesturePinchVectorResult"
+              }
+            ],
+            "returns": "void",
+            "lifetime": "call"
+          }
+        },
+        {
+          "context": "getGesturePinchVectorResult"
+        }
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeGetGesturePinchAngle",
+      "symbol": "scrl_api_GetGesturePinchAngle",
+      "params": [],
+      "returns": "f64"
+    },
+    {
+      "name": "nativeSetShapesTexture",
+      "symbol": "scrl_api_SetShapesTexture",
+      "params": [
+        "u32",
+        "f64",
+        "f64",
+        "f64",
+        "f64"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeGetShapesTexture",
+      "symbol": "scrl_api_GetShapesTexture",
+      "params": [],
+      "returns": "u32"
+    },
+    {
+      "name": "nativeGetShapesTextureRectangle",
+      "symbol": "scrl_api_GetShapesTextureRectangle",
+      "params": [
+        {
+          "callback": {
+            "id": "getShapesTextureRectangleResult",
+            "params": [
+              "f64",
+              "f64",
+              "f64",
+              "f64",
+              {
+                "context": "getShapesTextureRectangleResult"
+              }
+            ],
+            "returns": "void",
+            "lifetime": "call"
+          }
+        },
+        {
+          "context": "getShapesTextureRectangleResult"
+        }
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeDrawPixel",
+      "symbol": "scrl_api_DrawPixel",
+      "params": [
+        "i32",
+        "i32",
+        "u8",
+        "u8",
+        "u8",
+        "u8"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeDrawPixelV",
+      "symbol": "scrl_api_DrawPixelV",
+      "params": [
+        "f64",
+        "f64",
+        "u8",
+        "u8",
+        "u8",
+        "u8"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeDrawLine",
+      "symbol": "scrl_api_DrawLine",
+      "params": [
+        "i32",
+        "i32",
+        "i32",
+        "i32",
+        "u8",
+        "u8",
+        "u8",
+        "u8"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeDrawLineV",
+      "symbol": "scrl_api_DrawLineV",
+      "params": [
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "u8",
+        "u8",
+        "u8",
+        "u8"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeDrawLineEx",
+      "symbol": "scrl_api_DrawLineEx",
+      "params": [
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "u8",
+        "u8",
+        "u8",
+        "u8"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeDrawLineStrip",
+      "symbol": "scrl_api_DrawLineStrip",
+      "params": [
+        {
+          "callback": {
+            "id": "points_read",
+            "params": [
+              "i32",
+              "i32",
+              {
+                "context": "points_read"
+              }
+            ],
+            "returns": "f64",
+            "lifetime": "call"
+          }
+        },
+        {
+          "context": "points_read"
+        },
+        "i32",
+        "u8",
+        "u8",
+        "u8",
+        "u8"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeDrawLineBezier",
+      "symbol": "scrl_api_DrawLineBezier",
+      "params": [
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "u8",
+        "u8",
+        "u8",
+        "u8"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeDrawLineDashed",
+      "symbol": "scrl_api_DrawLineDashed",
+      "params": [
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "i32",
+        "i32",
+        "u8",
+        "u8",
+        "u8",
+        "u8"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeDrawCircle",
+      "symbol": "scrl_api_DrawCircle",
+      "params": [
+        "i32",
+        "i32",
+        "f64",
+        "u8",
+        "u8",
+        "u8",
+        "u8"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeDrawCircleV",
+      "symbol": "scrl_api_DrawCircleV",
+      "params": [
+        "f64",
+        "f64",
+        "f64",
+        "u8",
+        "u8",
+        "u8",
+        "u8"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeDrawCircleGradient",
+      "symbol": "scrl_api_DrawCircleGradient",
+      "params": [
+        "f64",
+        "f64",
+        "f64",
+        "u8",
+        "u8",
+        "u8",
+        "u8",
+        "u8",
+        "u8",
+        "u8",
+        "u8"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeDrawCircleSector",
+      "symbol": "scrl_api_DrawCircleSector",
+      "params": [
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "i32",
+        "u8",
+        "u8",
+        "u8",
+        "u8"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeDrawCircleSectorLines",
+      "symbol": "scrl_api_DrawCircleSectorLines",
+      "params": [
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "i32",
+        "u8",
+        "u8",
+        "u8",
+        "u8"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeDrawCircleLines",
+      "symbol": "scrl_api_DrawCircleLines",
+      "params": [
+        "i32",
+        "i32",
+        "f64",
+        "u8",
+        "u8",
+        "u8",
+        "u8"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeDrawCircleLinesV",
+      "symbol": "scrl_api_DrawCircleLinesV",
+      "params": [
+        "f64",
+        "f64",
+        "f64",
+        "u8",
+        "u8",
+        "u8",
+        "u8"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeDrawEllipse",
+      "symbol": "scrl_api_DrawEllipse",
+      "params": [
+        "i32",
+        "i32",
+        "f64",
+        "f64",
+        "u8",
+        "u8",
+        "u8",
+        "u8"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeDrawEllipseV",
+      "symbol": "scrl_api_DrawEllipseV",
+      "params": [
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "u8",
+        "u8",
+        "u8",
+        "u8"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeDrawEllipseLines",
+      "symbol": "scrl_api_DrawEllipseLines",
+      "params": [
+        "i32",
+        "i32",
+        "f64",
+        "f64",
+        "u8",
+        "u8",
+        "u8",
+        "u8"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeDrawEllipseLinesV",
+      "symbol": "scrl_api_DrawEllipseLinesV",
+      "params": [
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "u8",
+        "u8",
+        "u8",
+        "u8"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeDrawRing",
+      "symbol": "scrl_api_DrawRing",
+      "params": [
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "i32",
+        "u8",
+        "u8",
+        "u8",
+        "u8"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeDrawRingLines",
+      "symbol": "scrl_api_DrawRingLines",
+      "params": [
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "i32",
+        "u8",
+        "u8",
+        "u8",
+        "u8"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeDrawRectangle",
+      "symbol": "scrl_api_DrawRectangle",
+      "params": [
+        "i32",
+        "i32",
+        "i32",
+        "i32",
+        "u8",
+        "u8",
+        "u8",
+        "u8"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeDrawRectangleV",
+      "symbol": "scrl_api_DrawRectangleV",
+      "params": [
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "u8",
+        "u8",
+        "u8",
+        "u8"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeDrawRectangleRec",
+      "symbol": "scrl_api_DrawRectangleRec",
+      "params": [
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "u8",
+        "u8",
+        "u8",
+        "u8"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeDrawRectanglePro",
+      "symbol": "scrl_api_DrawRectanglePro",
+      "params": [
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "u8",
+        "u8",
+        "u8",
+        "u8"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeDrawRectangleGradientV",
+      "symbol": "scrl_api_DrawRectangleGradientV",
+      "params": [
+        "i32",
+        "i32",
+        "i32",
+        "i32",
+        "u8",
+        "u8",
+        "u8",
+        "u8",
+        "u8",
+        "u8",
+        "u8",
+        "u8"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeDrawRectangleGradientH",
+      "symbol": "scrl_api_DrawRectangleGradientH",
+      "params": [
+        "i32",
+        "i32",
+        "i32",
+        "i32",
+        "u8",
+        "u8",
+        "u8",
+        "u8",
+        "u8",
+        "u8",
+        "u8",
+        "u8"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeDrawRectangleGradientEx",
+      "symbol": "scrl_api_DrawRectangleGradientEx",
+      "params": [
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "u8",
+        "u8",
+        "u8",
+        "u8",
+        "u8",
+        "u8",
+        "u8",
+        "u8",
+        "u8",
+        "u8",
+        "u8",
+        "u8",
+        "u8",
+        "u8",
+        "u8",
+        "u8"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeDrawRectangleLines",
+      "symbol": "scrl_api_DrawRectangleLines",
+      "params": [
+        "i32",
+        "i32",
+        "i32",
+        "i32",
+        "u8",
+        "u8",
+        "u8",
+        "u8"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeDrawRectangleLinesEx",
+      "symbol": "scrl_api_DrawRectangleLinesEx",
+      "params": [
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "u8",
+        "u8",
+        "u8",
+        "u8"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeDrawRectangleRounded",
+      "symbol": "scrl_api_DrawRectangleRounded",
+      "params": [
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "i32",
+        "u8",
+        "u8",
+        "u8",
+        "u8"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeDrawRectangleRoundedLines",
+      "symbol": "scrl_api_DrawRectangleRoundedLines",
+      "params": [
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "i32",
+        "u8",
+        "u8",
+        "u8",
+        "u8"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeDrawRectangleRoundedLinesEx",
+      "symbol": "scrl_api_DrawRectangleRoundedLinesEx",
+      "params": [
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "i32",
+        "f64",
+        "u8",
+        "u8",
+        "u8",
+        "u8"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeDrawTriangle",
+      "symbol": "scrl_api_DrawTriangle",
+      "params": [
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "u8",
+        "u8",
+        "u8",
+        "u8"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeDrawTriangleLines",
+      "symbol": "scrl_api_DrawTriangleLines",
+      "params": [
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "u8",
+        "u8",
+        "u8",
+        "u8"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeDrawTriangleFan",
+      "symbol": "scrl_api_DrawTriangleFan",
+      "params": [
+        {
+          "callback": {
+            "id": "points_read",
+            "params": [
+              "i32",
+              "i32",
+              {
+                "context": "points_read"
+              }
+            ],
+            "returns": "f64",
+            "lifetime": "call"
+          }
+        },
+        {
+          "context": "points_read"
+        },
+        "i32",
+        "u8",
+        "u8",
+        "u8",
+        "u8"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeDrawTriangleStrip",
+      "symbol": "scrl_api_DrawTriangleStrip",
+      "params": [
+        {
+          "callback": {
+            "id": "points_read",
+            "params": [
+              "i32",
+              "i32",
+              {
+                "context": "points_read"
+              }
+            ],
+            "returns": "f64",
+            "lifetime": "call"
+          }
+        },
+        {
+          "context": "points_read"
+        },
+        "i32",
+        "u8",
+        "u8",
+        "u8",
+        "u8"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeDrawPoly",
+      "symbol": "scrl_api_DrawPoly",
+      "params": [
+        "f64",
+        "f64",
+        "i32",
+        "f64",
+        "f64",
+        "u8",
+        "u8",
+        "u8",
+        "u8"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeDrawPolyLines",
+      "symbol": "scrl_api_DrawPolyLines",
+      "params": [
+        "f64",
+        "f64",
+        "i32",
+        "f64",
+        "f64",
+        "u8",
+        "u8",
+        "u8",
+        "u8"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeDrawPolyLinesEx",
+      "symbol": "scrl_api_DrawPolyLinesEx",
+      "params": [
+        "f64",
+        "f64",
+        "i32",
+        "f64",
+        "f64",
+        "f64",
+        "u8",
+        "u8",
+        "u8",
+        "u8"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeDrawSplineLinear",
+      "symbol": "scrl_api_DrawSplineLinear",
+      "params": [
+        {
+          "callback": {
+            "id": "points_read",
+            "params": [
+              "i32",
+              "i32",
+              {
+                "context": "points_read"
+              }
+            ],
+            "returns": "f64",
+            "lifetime": "call"
+          }
+        },
+        {
+          "context": "points_read"
+        },
+        "i32",
+        "f64",
+        "u8",
+        "u8",
+        "u8",
+        "u8"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeDrawSplineBasis",
+      "symbol": "scrl_api_DrawSplineBasis",
+      "params": [
+        {
+          "callback": {
+            "id": "points_read",
+            "params": [
+              "i32",
+              "i32",
+              {
+                "context": "points_read"
+              }
+            ],
+            "returns": "f64",
+            "lifetime": "call"
+          }
+        },
+        {
+          "context": "points_read"
+        },
+        "i32",
+        "f64",
+        "u8",
+        "u8",
+        "u8",
+        "u8"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeDrawSplineCatmullRom",
+      "symbol": "scrl_api_DrawSplineCatmullRom",
+      "params": [
+        {
+          "callback": {
+            "id": "points_read",
+            "params": [
+              "i32",
+              "i32",
+              {
+                "context": "points_read"
+              }
+            ],
+            "returns": "f64",
+            "lifetime": "call"
+          }
+        },
+        {
+          "context": "points_read"
+        },
+        "i32",
+        "f64",
+        "u8",
+        "u8",
+        "u8",
+        "u8"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeDrawSplineBezierQuadratic",
+      "symbol": "scrl_api_DrawSplineBezierQuadratic",
+      "params": [
+        {
+          "callback": {
+            "id": "points_read",
+            "params": [
+              "i32",
+              "i32",
+              {
+                "context": "points_read"
+              }
+            ],
+            "returns": "f64",
+            "lifetime": "call"
+          }
+        },
+        {
+          "context": "points_read"
+        },
+        "i32",
+        "f64",
+        "u8",
+        "u8",
+        "u8",
+        "u8"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeDrawSplineBezierCubic",
+      "symbol": "scrl_api_DrawSplineBezierCubic",
+      "params": [
+        {
+          "callback": {
+            "id": "points_read",
+            "params": [
+              "i32",
+              "i32",
+              {
+                "context": "points_read"
+              }
+            ],
+            "returns": "f64",
+            "lifetime": "call"
+          }
+        },
+        {
+          "context": "points_read"
+        },
+        "i32",
+        "f64",
+        "u8",
+        "u8",
+        "u8",
+        "u8"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeDrawSplineSegmentLinear",
+      "symbol": "scrl_api_DrawSplineSegmentLinear",
+      "params": [
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "u8",
+        "u8",
+        "u8",
+        "u8"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeDrawSplineSegmentBasis",
+      "symbol": "scrl_api_DrawSplineSegmentBasis",
+      "params": [
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "u8",
+        "u8",
+        "u8",
+        "u8"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeDrawSplineSegmentCatmullRom",
+      "symbol": "scrl_api_DrawSplineSegmentCatmullRom",
+      "params": [
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "u8",
+        "u8",
+        "u8",
+        "u8"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeDrawSplineSegmentBezierQuadratic",
+      "symbol": "scrl_api_DrawSplineSegmentBezierQuadratic",
+      "params": [
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "u8",
+        "u8",
+        "u8",
+        "u8"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeDrawSplineSegmentBezierCubic",
+      "symbol": "scrl_api_DrawSplineSegmentBezierCubic",
+      "params": [
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "u8",
+        "u8",
+        "u8",
+        "u8"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeGetSplinePointLinear",
+      "symbol": "scrl_api_GetSplinePointLinear",
+      "params": [
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        {
+          "callback": {
+            "id": "getSplinePointLinearResult",
+            "params": [
+              "f64",
+              "f64",
+              {
+                "context": "getSplinePointLinearResult"
+              }
+            ],
+            "returns": "void",
+            "lifetime": "call"
+          }
+        },
+        {
+          "context": "getSplinePointLinearResult"
+        }
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeGetSplinePointBasis",
+      "symbol": "scrl_api_GetSplinePointBasis",
+      "params": [
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        {
+          "callback": {
+            "id": "getSplinePointBasisResult",
+            "params": [
+              "f64",
+              "f64",
+              {
+                "context": "getSplinePointBasisResult"
+              }
+            ],
+            "returns": "void",
+            "lifetime": "call"
+          }
+        },
+        {
+          "context": "getSplinePointBasisResult"
+        }
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeGetSplinePointCatmullRom",
+      "symbol": "scrl_api_GetSplinePointCatmullRom",
+      "params": [
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        {
+          "callback": {
+            "id": "getSplinePointCatmullRomResult",
+            "params": [
+              "f64",
+              "f64",
+              {
+                "context": "getSplinePointCatmullRomResult"
+              }
+            ],
+            "returns": "void",
+            "lifetime": "call"
+          }
+        },
+        {
+          "context": "getSplinePointCatmullRomResult"
+        }
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeGetSplinePointBezierQuad",
+      "symbol": "scrl_api_GetSplinePointBezierQuad",
+      "params": [
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        {
+          "callback": {
+            "id": "getSplinePointBezierQuadResult",
+            "params": [
+              "f64",
+              "f64",
+              {
+                "context": "getSplinePointBezierQuadResult"
+              }
+            ],
+            "returns": "void",
+            "lifetime": "call"
+          }
+        },
+        {
+          "context": "getSplinePointBezierQuadResult"
+        }
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeGetSplinePointBezierCubic",
+      "symbol": "scrl_api_GetSplinePointBezierCubic",
+      "params": [
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        {
+          "callback": {
+            "id": "getSplinePointBezierCubicResult",
+            "params": [
+              "f64",
+              "f64",
+              {
+                "context": "getSplinePointBezierCubicResult"
+              }
+            ],
+            "returns": "void",
+            "lifetime": "call"
+          }
+        },
+        {
+          "context": "getSplinePointBezierCubicResult"
+        }
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeCheckCollisionRecs",
+      "symbol": "scrl_api_CheckCollisionRecs",
+      "params": [
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64"
+      ],
+      "returns": "bool"
+    },
+    {
+      "name": "nativeCheckCollisionCircles",
+      "symbol": "scrl_api_CheckCollisionCircles",
+      "params": [
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64"
+      ],
+      "returns": "bool"
+    },
+    {
+      "name": "nativeCheckCollisionCircleRec",
+      "symbol": "scrl_api_CheckCollisionCircleRec",
+      "params": [
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64"
+      ],
+      "returns": "bool"
+    },
+    {
+      "name": "nativeCheckCollisionCircleLine",
+      "symbol": "scrl_api_CheckCollisionCircleLine",
+      "params": [
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64"
+      ],
+      "returns": "bool"
+    },
+    {
+      "name": "nativeCheckCollisionPointRec",
+      "symbol": "scrl_api_CheckCollisionPointRec",
+      "params": [
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64"
+      ],
+      "returns": "bool"
+    },
+    {
+      "name": "nativeCheckCollisionPointCircle",
+      "symbol": "scrl_api_CheckCollisionPointCircle",
+      "params": [
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64"
+      ],
+      "returns": "bool"
+    },
+    {
+      "name": "nativeCheckCollisionPointTriangle",
+      "symbol": "scrl_api_CheckCollisionPointTriangle",
+      "params": [
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64"
+      ],
+      "returns": "bool"
+    },
+    {
+      "name": "nativeCheckCollisionPointLine",
+      "symbol": "scrl_api_CheckCollisionPointLine",
+      "params": [
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "i32"
+      ],
+      "returns": "bool"
+    },
+    {
+      "name": "nativeCheckCollisionPointPoly",
+      "symbol": "scrl_api_CheckCollisionPointPoly",
+      "params": [
+        "f64",
+        "f64",
+        {
+          "callback": {
+            "id": "points_read",
+            "params": [
+              "i32",
+              "i32",
+              {
+                "context": "points_read"
+              }
+            ],
+            "returns": "f64",
+            "lifetime": "call"
+          }
+        },
+        {
+          "context": "points_read"
+        },
+        "i32"
+      ],
+      "returns": "bool"
+    },
+    {
+      "name": "nativeGetCollisionRec",
+      "symbol": "scrl_api_GetCollisionRec",
+      "params": [
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        {
+          "callback": {
+            "id": "getCollisionRecResult",
+            "params": [
+              "f64",
+              "f64",
+              "f64",
+              "f64",
+              {
+                "context": "getCollisionRecResult"
+              }
+            ],
+            "returns": "void",
+            "lifetime": "call"
+          }
+        },
+        {
+          "context": "getCollisionRecResult"
+        }
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeLoadImage",
+      "symbol": "scrl_api_LoadImage",
+      "params": [
+        "string",
+        "bool"
+      ],
+      "returns": "u32"
+    },
+    {
+      "name": "nativeLoadImageRaw",
+      "symbol": "scrl_api_LoadImageRaw",
+      "params": [
+        "string",
+        "bool",
+        "i32",
+        "i32",
+        "i32",
+        "i32"
+      ],
+      "returns": "u32"
+    },
+    {
+      "name": "nativeLoadImageFromMemory",
+      "symbol": "scrl_api_LoadImageFromMemory",
+      "params": [
+        "string",
+        "bool",
+        "bytes",
+        "i32"
+      ],
+      "returns": "u32"
+    },
+    {
+      "name": "nativeLoadImageFromTexture",
+      "symbol": "scrl_api_LoadImageFromTexture",
+      "params": [
+        "u32"
+      ],
+      "returns": "u32"
+    },
+    {
+      "name": "nativeLoadImageFromScreen",
+      "symbol": "scrl_api_LoadImageFromScreen",
+      "params": [],
+      "returns": "u32"
+    },
+    {
+      "name": "nativeIsImageValid",
+      "symbol": "scrl_api_IsImageValid",
+      "params": [
+        "u32"
+      ],
+      "returns": "bool"
+    },
+    {
+      "name": "nativeUnloadImage",
+      "symbol": "scrl_api_UnloadImage",
+      "params": [
+        "u32"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeExportImage",
+      "symbol": "scrl_api_ExportImage",
+      "params": [
+        "u32",
+        "string",
+        "bool"
+      ],
+      "returns": "bool"
+    },
+    {
+      "name": "nativeExportImageAsCode",
+      "symbol": "scrl_api_ExportImageAsCode",
+      "params": [
+        "u32",
+        "string",
+        "bool"
+      ],
+      "returns": "bool"
+    },
+    {
+      "name": "nativeGenImageColor",
+      "symbol": "scrl_api_GenImageColor",
+      "params": [
+        "i32",
+        "i32",
+        "u8",
+        "u8",
+        "u8",
+        "u8"
+      ],
+      "returns": "u32"
+    },
+    {
+      "name": "nativeGenImageGradientLinear",
+      "symbol": "scrl_api_GenImageGradientLinear",
+      "params": [
+        "i32",
+        "i32",
+        "i32",
+        "u8",
+        "u8",
+        "u8",
+        "u8",
+        "u8",
+        "u8",
+        "u8",
+        "u8"
+      ],
+      "returns": "u32"
+    },
+    {
+      "name": "nativeGenImageGradientRadial",
+      "symbol": "scrl_api_GenImageGradientRadial",
+      "params": [
+        "i32",
+        "i32",
+        "f64",
+        "u8",
+        "u8",
+        "u8",
+        "u8",
+        "u8",
+        "u8",
+        "u8",
+        "u8"
+      ],
+      "returns": "u32"
+    },
+    {
+      "name": "nativeGenImageGradientSquare",
+      "symbol": "scrl_api_GenImageGradientSquare",
+      "params": [
+        "i32",
+        "i32",
+        "f64",
+        "u8",
+        "u8",
+        "u8",
+        "u8",
+        "u8",
+        "u8",
+        "u8",
+        "u8"
+      ],
+      "returns": "u32"
+    },
+    {
+      "name": "nativeGenImageChecked",
+      "symbol": "scrl_api_GenImageChecked",
+      "params": [
+        "i32",
+        "i32",
+        "i32",
+        "i32",
+        "u8",
+        "u8",
+        "u8",
+        "u8",
+        "u8",
+        "u8",
+        "u8",
+        "u8"
+      ],
+      "returns": "u32"
+    },
+    {
+      "name": "nativeGenImageWhiteNoise",
+      "symbol": "scrl_api_GenImageWhiteNoise",
+      "params": [
+        "i32",
+        "i32",
+        "f64"
+      ],
+      "returns": "u32"
+    },
+    {
+      "name": "nativeGenImagePerlinNoise",
+      "symbol": "scrl_api_GenImagePerlinNoise",
+      "params": [
+        "i32",
+        "i32",
+        "i32",
+        "i32",
+        "f64"
+      ],
+      "returns": "u32"
+    },
+    {
+      "name": "nativeGenImageCellular",
+      "symbol": "scrl_api_GenImageCellular",
+      "params": [
+        "i32",
+        "i32",
+        "i32"
+      ],
+      "returns": "u32"
+    },
+    {
+      "name": "nativeGenImageText",
+      "symbol": "scrl_api_GenImageText",
+      "params": [
+        "i32",
+        "i32",
+        "string",
+        "bool"
+      ],
+      "returns": "u32"
+    },
+    {
+      "name": "nativeImageCopy",
+      "symbol": "scrl_api_ImageCopy",
+      "params": [
+        "u32"
+      ],
+      "returns": "u32"
+    },
+    {
+      "name": "nativeImageFromImage",
+      "symbol": "scrl_api_ImageFromImage",
+      "params": [
+        "u32",
+        "f64",
+        "f64",
+        "f64",
+        "f64"
+      ],
+      "returns": "u32"
+    },
+    {
+      "name": "nativeImageFromChannel",
+      "symbol": "scrl_api_ImageFromChannel",
+      "params": [
+        "u32",
+        "i32"
+      ],
+      "returns": "u32"
+    },
+    {
+      "name": "nativeImageText",
+      "symbol": "scrl_api_ImageText",
+      "params": [
+        "string",
+        "bool",
+        "i32",
+        "u8",
+        "u8",
+        "u8",
+        "u8"
+      ],
+      "returns": "u32"
+    },
+    {
+      "name": "nativeImageTextEx",
+      "symbol": "scrl_api_ImageTextEx",
+      "params": [
+        "u32",
+        "string",
+        "bool",
+        "f64",
+        "f64",
+        "u8",
+        "u8",
+        "u8",
+        "u8"
+      ],
+      "returns": "u32"
+    },
+    {
+      "name": "nativeImageFormat",
+      "symbol": "scrl_api_ImageFormat",
+      "params": [
+        "u32",
+        "i32"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeImageToPOT",
+      "symbol": "scrl_api_ImageToPOT",
+      "params": [
+        "u32",
+        "u8",
+        "u8",
+        "u8",
+        "u8"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeImageCrop",
+      "symbol": "scrl_api_ImageCrop",
+      "params": [
+        "u32",
+        "f64",
+        "f64",
+        "f64",
+        "f64"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeImageAlphaCrop",
+      "symbol": "scrl_api_ImageAlphaCrop",
+      "params": [
+        "u32",
+        "f64"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeImageAlphaClear",
+      "symbol": "scrl_api_ImageAlphaClear",
+      "params": [
+        "u32",
+        "u8",
+        "u8",
+        "u8",
+        "u8",
+        "f64"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeImageAlphaMask",
+      "symbol": "scrl_api_ImageAlphaMask",
+      "params": [
+        "u32",
+        "u32"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeImageAlphaPremultiply",
+      "symbol": "scrl_api_ImageAlphaPremultiply",
+      "params": [
+        "u32"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeImageBlurGaussian",
+      "symbol": "scrl_api_ImageBlurGaussian",
+      "params": [
+        "u32",
+        "i32"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeImageKernelConvolution",
+      "symbol": "scrl_api_ImageKernelConvolution",
+      "params": [
+        "u32",
+        {
+          "callback": {
+            "id": "kernel_read",
+            "params": [
+              "i32",
+              "i32",
+              {
+                "context": "kernel_read"
+              }
+            ],
+            "returns": "f64",
+            "lifetime": "call"
+          }
+        },
+        {
+          "context": "kernel_read"
+        },
+        "i32"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeImageResize",
+      "symbol": "scrl_api_ImageResize",
+      "params": [
+        "u32",
+        "i32",
+        "i32"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeImageResizeNN",
+      "symbol": "scrl_api_ImageResizeNN",
+      "params": [
+        "u32",
+        "i32",
+        "i32"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeImageResizeCanvas",
+      "symbol": "scrl_api_ImageResizeCanvas",
+      "params": [
+        "u32",
+        "i32",
+        "i32",
+        "i32",
+        "i32",
+        "u8",
+        "u8",
+        "u8",
+        "u8"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeImageMipmaps",
+      "symbol": "scrl_api_ImageMipmaps",
+      "params": [
+        "u32"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeImageDither",
+      "symbol": "scrl_api_ImageDither",
+      "params": [
+        "u32",
+        "i32",
+        "i32",
+        "i32",
+        "i32"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeImageFlipVertical",
+      "symbol": "scrl_api_ImageFlipVertical",
+      "params": [
+        "u32"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeImageFlipHorizontal",
+      "symbol": "scrl_api_ImageFlipHorizontal",
+      "params": [
+        "u32"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeImageRotate",
+      "symbol": "scrl_api_ImageRotate",
+      "params": [
+        "u32",
+        "i32"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeImageRotateCW",
+      "symbol": "scrl_api_ImageRotateCW",
+      "params": [
+        "u32"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeImageRotateCCW",
+      "symbol": "scrl_api_ImageRotateCCW",
+      "params": [
+        "u32"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeImageColorTint",
+      "symbol": "scrl_api_ImageColorTint",
+      "params": [
+        "u32",
+        "u8",
+        "u8",
+        "u8",
+        "u8"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeImageColorInvert",
+      "symbol": "scrl_api_ImageColorInvert",
+      "params": [
+        "u32"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeImageColorGrayscale",
+      "symbol": "scrl_api_ImageColorGrayscale",
+      "params": [
+        "u32"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeImageColorContrast",
+      "symbol": "scrl_api_ImageColorContrast",
+      "params": [
+        "u32",
+        "f64"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeImageColorBrightness",
+      "symbol": "scrl_api_ImageColorBrightness",
+      "params": [
+        "u32",
+        "i32"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeImageColorReplace",
+      "symbol": "scrl_api_ImageColorReplace",
+      "params": [
+        "u32",
+        "u8",
+        "u8",
+        "u8",
+        "u8",
+        "u8",
+        "u8",
+        "u8",
+        "u8"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeGetImageAlphaBorder",
+      "symbol": "scrl_api_GetImageAlphaBorder",
+      "params": [
+        "u32",
+        "f64",
+        {
+          "callback": {
+            "id": "getImageAlphaBorderResult",
+            "params": [
+              "f64",
+              "f64",
+              "f64",
+              "f64",
+              {
+                "context": "getImageAlphaBorderResult"
+              }
+            ],
+            "returns": "void",
+            "lifetime": "call"
+          }
+        },
+        {
+          "context": "getImageAlphaBorderResult"
+        }
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeGetImageColor",
+      "symbol": "scrl_api_GetImageColor",
+      "params": [
+        "u32",
+        "i32",
+        "i32",
+        {
+          "callback": {
+            "id": "getImageColorResult",
+            "params": [
+              "u8",
+              "u8",
+              "u8",
+              "u8",
+              {
+                "context": "getImageColorResult"
+              }
+            ],
+            "returns": "void",
+            "lifetime": "call"
+          }
+        },
+        {
+          "context": "getImageColorResult"
+        }
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeImageClearBackground",
+      "symbol": "scrl_api_ImageClearBackground",
+      "params": [
+        "u32",
+        "u8",
+        "u8",
+        "u8",
+        "u8"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeImageDrawPixel",
+      "symbol": "scrl_api_ImageDrawPixel",
+      "params": [
+        "u32",
+        "i32",
+        "i32",
+        "u8",
+        "u8",
+        "u8",
+        "u8"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeImageDrawPixelV",
+      "symbol": "scrl_api_ImageDrawPixelV",
+      "params": [
+        "u32",
+        "f64",
+        "f64",
+        "u8",
+        "u8",
+        "u8",
+        "u8"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeImageDrawLine",
+      "symbol": "scrl_api_ImageDrawLine",
+      "params": [
+        "u32",
+        "i32",
+        "i32",
+        "i32",
+        "i32",
+        "u8",
+        "u8",
+        "u8",
+        "u8"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeImageDrawLineV",
+      "symbol": "scrl_api_ImageDrawLineV",
+      "params": [
+        "u32",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "u8",
+        "u8",
+        "u8",
+        "u8"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeImageDrawLineEx",
+      "symbol": "scrl_api_ImageDrawLineEx",
+      "params": [
+        "u32",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "i32",
+        "u8",
+        "u8",
+        "u8",
+        "u8"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeImageDrawCircle",
+      "symbol": "scrl_api_ImageDrawCircle",
+      "params": [
+        "u32",
+        "i32",
+        "i32",
+        "i32",
+        "u8",
+        "u8",
+        "u8",
+        "u8"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeImageDrawCircleV",
+      "symbol": "scrl_api_ImageDrawCircleV",
+      "params": [
+        "u32",
+        "f64",
+        "f64",
+        "i32",
+        "u8",
+        "u8",
+        "u8",
+        "u8"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeImageDrawCircleLines",
+      "symbol": "scrl_api_ImageDrawCircleLines",
+      "params": [
+        "u32",
+        "i32",
+        "i32",
+        "i32",
+        "u8",
+        "u8",
+        "u8",
+        "u8"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeImageDrawCircleLinesV",
+      "symbol": "scrl_api_ImageDrawCircleLinesV",
+      "params": [
+        "u32",
+        "f64",
+        "f64",
+        "i32",
+        "u8",
+        "u8",
+        "u8",
+        "u8"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeImageDrawRectangle",
+      "symbol": "scrl_api_ImageDrawRectangle",
+      "params": [
+        "u32",
+        "i32",
+        "i32",
+        "i32",
+        "i32",
+        "u8",
+        "u8",
+        "u8",
+        "u8"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeImageDrawRectangleV",
+      "symbol": "scrl_api_ImageDrawRectangleV",
+      "params": [
+        "u32",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "u8",
+        "u8",
+        "u8",
+        "u8"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeImageDrawRectangleRec",
+      "symbol": "scrl_api_ImageDrawRectangleRec",
+      "params": [
+        "u32",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "u8",
+        "u8",
+        "u8",
+        "u8"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeImageDrawRectangleLines",
+      "symbol": "scrl_api_ImageDrawRectangleLines",
+      "params": [
+        "u32",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "i32",
+        "u8",
+        "u8",
+        "u8",
+        "u8"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeImageDrawTriangle",
+      "symbol": "scrl_api_ImageDrawTriangle",
+      "params": [
+        "u32",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "u8",
+        "u8",
+        "u8",
+        "u8"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeImageDrawTriangleEx",
+      "symbol": "scrl_api_ImageDrawTriangleEx",
+      "params": [
+        "u32",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "u8",
+        "u8",
+        "u8",
+        "u8",
+        "u8",
+        "u8",
+        "u8",
+        "u8",
+        "u8",
+        "u8",
+        "u8",
+        "u8"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeImageDrawTriangleLines",
+      "symbol": "scrl_api_ImageDrawTriangleLines",
+      "params": [
+        "u32",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "u8",
+        "u8",
+        "u8",
+        "u8"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeImageDrawTriangleFan",
+      "symbol": "scrl_api_ImageDrawTriangleFan",
+      "params": [
+        "u32",
+        {
+          "callback": {
+            "id": "points_read",
+            "params": [
+              "i32",
+              "i32",
+              {
+                "context": "points_read"
+              }
+            ],
+            "returns": "f64",
+            "lifetime": "call"
+          }
+        },
+        {
+          "context": "points_read"
+        },
+        "i32",
+        "u8",
+        "u8",
+        "u8",
+        "u8"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeImageDrawTriangleStrip",
+      "symbol": "scrl_api_ImageDrawTriangleStrip",
+      "params": [
+        "u32",
+        {
+          "callback": {
+            "id": "points_read",
+            "params": [
+              "i32",
+              "i32",
+              {
+                "context": "points_read"
+              }
+            ],
+            "returns": "f64",
+            "lifetime": "call"
+          }
+        },
+        {
+          "context": "points_read"
+        },
+        "i32",
+        "u8",
+        "u8",
+        "u8",
+        "u8"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeImageDraw",
+      "symbol": "scrl_api_ImageDraw",
+      "params": [
+        "u32",
+        "u32",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "u8",
+        "u8",
+        "u8",
+        "u8"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeImageDrawText",
+      "symbol": "scrl_api_ImageDrawText",
+      "params": [
+        "u32",
+        "string",
+        "bool",
+        "i32",
+        "i32",
+        "i32",
+        "u8",
+        "u8",
+        "u8",
+        "u8"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeImageDrawTextEx",
+      "symbol": "scrl_api_ImageDrawTextEx",
+      "params": [
+        "u32",
+        "u32",
+        "string",
+        "bool",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "u8",
+        "u8",
+        "u8",
+        "u8"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeLoadTexture",
+      "symbol": "scrl_api_LoadTexture",
+      "params": [
+        "string",
+        "bool"
+      ],
+      "returns": "u32"
+    },
+    {
+      "name": "nativeLoadTextureFromImage",
+      "symbol": "scrl_api_LoadTextureFromImage",
+      "params": [
+        "u32"
+      ],
+      "returns": "u32"
+    },
+    {
+      "name": "nativeLoadTextureCubemap",
+      "symbol": "scrl_api_LoadTextureCubemap",
+      "params": [
+        "u32",
+        "i32"
+      ],
+      "returns": "u32"
+    },
+    {
+      "name": "nativeLoadRenderTexture",
+      "symbol": "scrl_api_LoadRenderTexture",
+      "params": [
+        "i32",
+        "i32"
+      ],
+      "returns": "u32"
+    },
+    {
+      "name": "nativeIsTextureValid",
+      "symbol": "scrl_api_IsTextureValid",
+      "params": [
+        "u32"
+      ],
+      "returns": "bool"
+    },
+    {
+      "name": "nativeUnloadTexture",
+      "symbol": "scrl_api_UnloadTexture",
+      "params": [
+        "u32"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeIsRenderTextureValid",
+      "symbol": "scrl_api_IsRenderTextureValid",
+      "params": [
+        "u32"
+      ],
+      "returns": "bool"
+    },
+    {
+      "name": "nativeUnloadRenderTexture",
+      "symbol": "scrl_api_UnloadRenderTexture",
+      "params": [
+        "u32"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeUpdateTexture",
+      "symbol": "scrl_api_UpdateTexture",
+      "params": [
+        "u32",
+        "bytes"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeUpdateTextureRec",
+      "symbol": "scrl_api_UpdateTextureRec",
+      "params": [
+        "u32",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "bytes"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeGenTextureMipmaps",
+      "symbol": "scrl_api_GenTextureMipmaps",
+      "params": [
+        "u32"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeSetTextureFilter",
+      "symbol": "scrl_api_SetTextureFilter",
+      "params": [
+        "u32",
+        "i32"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeSetTextureWrap",
+      "symbol": "scrl_api_SetTextureWrap",
+      "params": [
+        "u32",
+        "i32"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeDrawTexture",
+      "symbol": "scrl_api_DrawTexture",
+      "params": [
+        "u32",
+        "i32",
+        "i32",
+        "u8",
+        "u8",
+        "u8",
+        "u8"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeDrawTextureV",
+      "symbol": "scrl_api_DrawTextureV",
+      "params": [
+        "u32",
+        "f64",
+        "f64",
+        "u8",
+        "u8",
+        "u8",
+        "u8"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeDrawTextureEx",
+      "symbol": "scrl_api_DrawTextureEx",
+      "params": [
+        "u32",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "u8",
+        "u8",
+        "u8",
+        "u8"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeDrawTextureRec",
+      "symbol": "scrl_api_DrawTextureRec",
+      "params": [
+        "u32",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "u8",
+        "u8",
+        "u8",
+        "u8"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeDrawTexturePro",
+      "symbol": "scrl_api_DrawTexturePro",
+      "params": [
+        "u32",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "u8",
+        "u8",
+        "u8",
+        "u8"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeDrawTextureNPatch",
+      "symbol": "scrl_api_DrawTextureNPatch",
+      "params": [
+        "u32",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "i32",
+        "i32",
+        "i32",
+        "i32",
+        "i32",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "u8",
+        "u8",
+        "u8",
+        "u8"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeColorIsEqual",
+      "symbol": "scrl_api_ColorIsEqual",
+      "params": [
+        "u8",
+        "u8",
+        "u8",
+        "u8",
+        "u8",
+        "u8",
+        "u8",
+        "u8"
+      ],
+      "returns": "bool"
+    },
+    {
+      "name": "nativeFade",
+      "symbol": "scrl_api_Fade",
+      "params": [
+        "u8",
+        "u8",
+        "u8",
+        "u8",
+        "f64",
+        {
+          "callback": {
+            "id": "fadeResult",
+            "params": [
+              "u8",
+              "u8",
+              "u8",
+              "u8",
+              {
+                "context": "fadeResult"
+              }
+            ],
+            "returns": "void",
+            "lifetime": "call"
+          }
+        },
+        {
+          "context": "fadeResult"
+        }
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeColorToInt",
+      "symbol": "scrl_api_ColorToInt",
+      "params": [
+        "u8",
+        "u8",
+        "u8",
+        "u8"
+      ],
+      "returns": "i32"
+    },
+    {
+      "name": "nativeColorNormalize",
+      "symbol": "scrl_api_ColorNormalize",
+      "params": [
+        "u8",
+        "u8",
+        "u8",
+        "u8",
+        {
+          "callback": {
+            "id": "colorNormalizeResult",
+            "params": [
+              "f64",
+              "f64",
+              "f64",
+              "f64",
+              {
+                "context": "colorNormalizeResult"
+              }
+            ],
+            "returns": "void",
+            "lifetime": "call"
+          }
+        },
+        {
+          "context": "colorNormalizeResult"
+        }
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeColorFromNormalized",
+      "symbol": "scrl_api_ColorFromNormalized",
+      "params": [
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        {
+          "callback": {
+            "id": "colorFromNormalizedResult",
+            "params": [
+              "u8",
+              "u8",
+              "u8",
+              "u8",
+              {
+                "context": "colorFromNormalizedResult"
+              }
+            ],
+            "returns": "void",
+            "lifetime": "call"
+          }
+        },
+        {
+          "context": "colorFromNormalizedResult"
+        }
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeColorToHSV",
+      "symbol": "scrl_api_ColorToHSV",
+      "params": [
+        "u8",
+        "u8",
+        "u8",
+        "u8",
+        {
+          "callback": {
+            "id": "colorToHSVResult",
+            "params": [
+              "f64",
+              "f64",
+              "f64",
+              {
+                "context": "colorToHSVResult"
+              }
+            ],
+            "returns": "void",
+            "lifetime": "call"
+          }
+        },
+        {
+          "context": "colorToHSVResult"
+        }
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeColorFromHSV",
+      "symbol": "scrl_api_ColorFromHSV",
+      "params": [
+        "f64",
+        "f64",
+        "f64",
+        {
+          "callback": {
+            "id": "colorFromHSVResult",
+            "params": [
+              "u8",
+              "u8",
+              "u8",
+              "u8",
+              {
+                "context": "colorFromHSVResult"
+              }
+            ],
+            "returns": "void",
+            "lifetime": "call"
+          }
+        },
+        {
+          "context": "colorFromHSVResult"
+        }
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeColorTint",
+      "symbol": "scrl_api_ColorTint",
+      "params": [
+        "u8",
+        "u8",
+        "u8",
+        "u8",
+        "u8",
+        "u8",
+        "u8",
+        "u8",
+        {
+          "callback": {
+            "id": "colorTintResult",
+            "params": [
+              "u8",
+              "u8",
+              "u8",
+              "u8",
+              {
+                "context": "colorTintResult"
+              }
+            ],
+            "returns": "void",
+            "lifetime": "call"
+          }
+        },
+        {
+          "context": "colorTintResult"
+        }
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeColorBrightness",
+      "symbol": "scrl_api_ColorBrightness",
+      "params": [
+        "u8",
+        "u8",
+        "u8",
+        "u8",
+        "f64",
+        {
+          "callback": {
+            "id": "colorBrightnessResult",
+            "params": [
+              "u8",
+              "u8",
+              "u8",
+              "u8",
+              {
+                "context": "colorBrightnessResult"
+              }
+            ],
+            "returns": "void",
+            "lifetime": "call"
+          }
+        },
+        {
+          "context": "colorBrightnessResult"
+        }
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeColorContrast",
+      "symbol": "scrl_api_ColorContrast",
+      "params": [
+        "u8",
+        "u8",
+        "u8",
+        "u8",
+        "f64",
+        {
+          "callback": {
+            "id": "colorContrastResult",
+            "params": [
+              "u8",
+              "u8",
+              "u8",
+              "u8",
+              {
+                "context": "colorContrastResult"
+              }
+            ],
+            "returns": "void",
+            "lifetime": "call"
+          }
+        },
+        {
+          "context": "colorContrastResult"
+        }
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeColorAlpha",
+      "symbol": "scrl_api_ColorAlpha",
+      "params": [
+        "u8",
+        "u8",
+        "u8",
+        "u8",
+        "f64",
+        {
+          "callback": {
+            "id": "colorAlphaResult",
+            "params": [
+              "u8",
+              "u8",
+              "u8",
+              "u8",
+              {
+                "context": "colorAlphaResult"
+              }
+            ],
+            "returns": "void",
+            "lifetime": "call"
+          }
+        },
+        {
+          "context": "colorAlphaResult"
+        }
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeColorAlphaBlend",
+      "symbol": "scrl_api_ColorAlphaBlend",
+      "params": [
+        "u8",
+        "u8",
+        "u8",
+        "u8",
+        "u8",
+        "u8",
+        "u8",
+        "u8",
+        "u8",
+        "u8",
+        "u8",
+        "u8",
+        {
+          "callback": {
+            "id": "colorAlphaBlendResult",
+            "params": [
+              "u8",
+              "u8",
+              "u8",
+              "u8",
+              {
+                "context": "colorAlphaBlendResult"
+              }
+            ],
+            "returns": "void",
+            "lifetime": "call"
+          }
+        },
+        {
+          "context": "colorAlphaBlendResult"
+        }
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeColorLerp",
+      "symbol": "scrl_api_ColorLerp",
+      "params": [
+        "u8",
+        "u8",
+        "u8",
+        "u8",
+        "u8",
+        "u8",
+        "u8",
+        "u8",
+        "f64",
+        {
+          "callback": {
+            "id": "colorLerpResult",
+            "params": [
+              "u8",
+              "u8",
+              "u8",
+              "u8",
+              {
+                "context": "colorLerpResult"
+              }
+            ],
+            "returns": "void",
+            "lifetime": "call"
+          }
+        },
+        {
+          "context": "colorLerpResult"
+        }
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeGetColor",
+      "symbol": "scrl_api_GetColor",
+      "params": [
+        "u32",
+        {
+          "callback": {
+            "id": "getColorResult",
+            "params": [
+              "u8",
+              "u8",
+              "u8",
+              "u8",
+              {
+                "context": "getColorResult"
+              }
+            ],
+            "returns": "void",
+            "lifetime": "call"
+          }
+        },
+        {
+          "context": "getColorResult"
+        }
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeGetPixelDataSize",
+      "symbol": "scrl_api_GetPixelDataSize",
+      "params": [
+        "i32",
+        "i32",
+        "i32"
+      ],
+      "returns": "i32"
+    },
+    {
+      "name": "nativeGetFontDefault",
+      "symbol": "scrl_api_GetFontDefault",
+      "params": [],
+      "returns": "u32"
+    },
+    {
+      "name": "nativeLoadFont",
+      "symbol": "scrl_api_LoadFont",
+      "params": [
+        "string",
+        "bool"
+      ],
+      "returns": "u32"
+    },
+    {
+      "name": "nativeLoadFontEx",
+      "symbol": "scrl_api_LoadFontEx",
+      "params": [
+        "string",
+        "bool",
+        "i32",
+        {
+          "callback": {
+            "id": "codepoints_read",
+            "params": [
+              "i32",
+              "i32",
+              {
+                "context": "codepoints_read"
+              }
+            ],
+            "returns": "f64",
+            "lifetime": "call"
+          }
+        },
+        {
+          "context": "codepoints_read"
+        },
+        "i32"
+      ],
+      "returns": "u32"
+    },
+    {
+      "name": "nativeLoadFontFromImage",
+      "symbol": "scrl_api_LoadFontFromImage",
+      "params": [
+        "u32",
+        "u8",
+        "u8",
+        "u8",
+        "u8",
+        "i32"
+      ],
+      "returns": "u32"
+    },
+    {
+      "name": "nativeLoadFontFromMemory",
+      "symbol": "scrl_api_LoadFontFromMemory",
+      "params": [
+        "string",
+        "bool",
+        "bytes",
+        "i32",
+        "i32",
+        {
+          "callback": {
+            "id": "codepoints_read",
+            "params": [
+              "i32",
+              "i32",
+              {
+                "context": "codepoints_read"
+              }
+            ],
+            "returns": "f64",
+            "lifetime": "call"
+          }
+        },
+        {
+          "context": "codepoints_read"
+        },
+        "i32"
+      ],
+      "returns": "u32"
+    },
+    {
+      "name": "nativeIsFontValid",
+      "symbol": "scrl_api_IsFontValid",
+      "params": [
+        "u32"
+      ],
+      "returns": "bool"
+    },
+    {
+      "name": "nativeUnloadFontData",
+      "symbol": "scrl_api_UnloadFontData",
+      "params": [
+        "u32",
+        "i32"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeUnloadFont",
+      "symbol": "scrl_api_UnloadFont",
+      "params": [
+        "u32"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeExportFontAsCode",
+      "symbol": "scrl_api_ExportFontAsCode",
+      "params": [
+        "u32",
+        "string",
+        "bool"
+      ],
+      "returns": "bool"
+    },
+    {
+      "name": "nativeDrawFPS",
+      "symbol": "scrl_api_DrawFPS",
+      "params": [
+        "i32",
+        "i32"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeDrawText",
+      "symbol": "scrl_api_DrawText",
+      "params": [
+        "string",
+        "bool",
+        "i32",
+        "i32",
+        "i32",
+        "u8",
+        "u8",
+        "u8",
+        "u8"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeDrawTextEx",
+      "symbol": "scrl_api_DrawTextEx",
+      "params": [
+        "u32",
+        "string",
+        "bool",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "u8",
+        "u8",
+        "u8",
+        "u8"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeDrawTextPro",
+      "symbol": "scrl_api_DrawTextPro",
+      "params": [
+        "u32",
+        "string",
+        "bool",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "u8",
+        "u8",
+        "u8",
+        "u8"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeDrawTextCodepoint",
+      "symbol": "scrl_api_DrawTextCodepoint",
+      "params": [
+        "u32",
+        "i32",
+        "f64",
+        "f64",
+        "f64",
+        "u8",
+        "u8",
+        "u8",
+        "u8"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeDrawTextCodepoints",
+      "symbol": "scrl_api_DrawTextCodepoints",
+      "params": [
+        "u32",
+        {
+          "callback": {
+            "id": "codepoints_read",
+            "params": [
+              "i32",
+              "i32",
+              {
+                "context": "codepoints_read"
+              }
+            ],
+            "returns": "f64",
+            "lifetime": "call"
+          }
+        },
+        {
+          "context": "codepoints_read"
+        },
+        "i32",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "u8",
+        "u8",
+        "u8",
+        "u8"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeSetTextLineSpacing",
+      "symbol": "scrl_api_SetTextLineSpacing",
+      "params": [
+        "i32"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeMeasureText",
+      "symbol": "scrl_api_MeasureText",
+      "params": [
+        "string",
+        "bool",
+        "i32"
+      ],
+      "returns": "i32"
+    },
+    {
+      "name": "nativeMeasureTextEx",
+      "symbol": "scrl_api_MeasureTextEx",
+      "params": [
+        "u32",
+        "string",
+        "bool",
+        "f64",
+        "f64",
+        {
+          "callback": {
+            "id": "measureTextExResult",
+            "params": [
+              "f64",
+              "f64",
+              {
+                "context": "measureTextExResult"
+              }
+            ],
+            "returns": "void",
+            "lifetime": "call"
+          }
+        },
+        {
+          "context": "measureTextExResult"
+        }
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeMeasureTextCodepoints",
+      "symbol": "scrl_api_MeasureTextCodepoints",
+      "params": [
+        "u32",
+        {
+          "callback": {
+            "id": "codepoints_read",
+            "params": [
+              "i32",
+              "i32",
+              {
+                "context": "codepoints_read"
+              }
+            ],
+            "returns": "f64",
+            "lifetime": "call"
+          }
+        },
+        {
+          "context": "codepoints_read"
+        },
+        "i32",
+        "f64",
+        "f64",
+        {
+          "callback": {
+            "id": "measureTextCodepointsResult",
+            "params": [
+              "f64",
+              "f64",
+              {
+                "context": "measureTextCodepointsResult"
+              }
+            ],
+            "returns": "void",
+            "lifetime": "call"
+          }
+        },
+        {
+          "context": "measureTextCodepointsResult"
+        }
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeGetGlyphIndex",
+      "symbol": "scrl_api_GetGlyphIndex",
+      "params": [
+        "u32",
+        "i32"
+      ],
+      "returns": "i32"
+    },
+    {
+      "name": "nativeGetGlyphInfo",
+      "symbol": "scrl_api_GetGlyphInfo",
+      "params": [
+        "u32",
+        "i32"
+      ],
+      "returns": "u32"
+    },
+    {
+      "name": "nativeGetGlyphAtlasRec",
+      "symbol": "scrl_api_GetGlyphAtlasRec",
+      "params": [
+        "u32",
+        "i32",
+        {
+          "callback": {
+            "id": "getGlyphAtlasRecResult",
+            "params": [
+              "f64",
+              "f64",
+              "f64",
+              "f64",
+              {
+                "context": "getGlyphAtlasRecResult"
+              }
+            ],
+            "returns": "void",
+            "lifetime": "call"
+          }
+        },
+        {
+          "context": "getGlyphAtlasRecResult"
+        }
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeLoadUTF8",
+      "symbol": "scrl_api_LoadUTF8",
+      "params": [
+        {
+          "callback": {
+            "id": "codepoints_read",
+            "params": [
+              "i32",
+              "i32",
+              {
+                "context": "codepoints_read"
+              }
+            ],
+            "returns": "f64",
+            "lifetime": "call"
+          }
+        },
+        {
+          "context": "codepoints_read"
+        },
+        "i32",
+        {
+          "callback": {
+            "id": "loadUTF8Result",
+            "params": [
+              "cstring",
+              {
+                "context": "loadUTF8Result"
+              }
+            ],
+            "returns": "void",
+            "lifetime": "call"
+          }
+        },
+        {
+          "context": "loadUTF8Result"
+        }
+      ],
+      "returns": "bool"
+    },
+    {
+      "name": "nativeGetCodepointCount",
+      "symbol": "scrl_api_GetCodepointCount",
+      "params": [
+        "string",
+        "bool"
+      ],
+      "returns": "i32"
+    },
+    {
+      "name": "nativeTextCopy",
+      "symbol": "scrl_api_TextCopy",
+      "params": [
+        "string",
+        "bool",
+        "string",
+        "bool"
+      ],
+      "returns": "i32"
+    },
+    {
+      "name": "nativeTextIsEqual",
+      "symbol": "scrl_api_TextIsEqual",
+      "params": [
+        "string",
+        "bool",
+        "string",
+        "bool"
+      ],
+      "returns": "bool"
+    },
+    {
+      "name": "nativeTextLength",
+      "symbol": "scrl_api_TextLength",
+      "params": [
+        "string",
+        "bool"
+      ],
+      "returns": "u32"
+    },
+    {
+      "name": "nativeTextSubtext",
+      "symbol": "scrl_api_TextSubtext",
+      "params": [
+        "string",
+        "bool",
+        "i32",
+        "i32",
+        {
+          "callback": {
+            "id": "textSubtextResult",
+            "params": [
+              "cstring",
+              {
+                "context": "textSubtextResult"
+              }
+            ],
+            "returns": "void",
+            "lifetime": "call"
+          }
+        },
+        {
+          "context": "textSubtextResult"
+        }
+      ],
+      "returns": "bool"
+    },
+    {
+      "name": "nativeTextRemoveSpaces",
+      "symbol": "scrl_api_TextRemoveSpaces",
+      "params": [
+        "string",
+        "bool",
+        {
+          "callback": {
+            "id": "textRemoveSpacesResult",
+            "params": [
+              "cstring",
+              {
+                "context": "textRemoveSpacesResult"
+              }
+            ],
+            "returns": "void",
+            "lifetime": "call"
+          }
+        },
+        {
+          "context": "textRemoveSpacesResult"
+        }
+      ],
+      "returns": "bool"
+    },
+    {
+      "name": "nativeGetTextBetween",
+      "symbol": "scrl_api_GetTextBetween",
+      "params": [
+        "string",
+        "bool",
+        "string",
+        "bool",
+        "string",
+        "bool",
+        {
+          "callback": {
+            "id": "getTextBetweenResult",
+            "params": [
+              "cstring",
+              {
+                "context": "getTextBetweenResult"
+              }
+            ],
+            "returns": "void",
+            "lifetime": "call"
+          }
+        },
+        {
+          "context": "getTextBetweenResult"
+        }
+      ],
+      "returns": "bool"
+    },
+    {
+      "name": "nativeTextReplace",
+      "symbol": "scrl_api_TextReplace",
+      "params": [
+        "string",
+        "bool",
+        "string",
+        "bool",
+        "string",
+        "bool",
+        {
+          "callback": {
+            "id": "textReplaceResult",
+            "params": [
+              "cstring",
+              {
+                "context": "textReplaceResult"
+              }
+            ],
+            "returns": "void",
+            "lifetime": "call"
+          }
+        },
+        {
+          "context": "textReplaceResult"
+        }
+      ],
+      "returns": "bool"
+    },
+    {
+      "name": "nativeTextReplaceAlloc",
+      "symbol": "scrl_api_TextReplaceAlloc",
+      "params": [
+        "string",
+        "bool",
+        "string",
+        "bool",
+        "string",
+        "bool",
+        {
+          "callback": {
+            "id": "textReplaceAllocResult",
+            "params": [
+              "cstring",
+              {
+                "context": "textReplaceAllocResult"
+              }
+            ],
+            "returns": "void",
+            "lifetime": "call"
+          }
+        },
+        {
+          "context": "textReplaceAllocResult"
+        }
+      ],
+      "returns": "bool"
+    },
+    {
+      "name": "nativeTextReplaceBetween",
+      "symbol": "scrl_api_TextReplaceBetween",
+      "params": [
+        "string",
+        "bool",
+        "string",
+        "bool",
+        "string",
+        "bool",
+        "string",
+        "bool",
+        {
+          "callback": {
+            "id": "textReplaceBetweenResult",
+            "params": [
+              "cstring",
+              {
+                "context": "textReplaceBetweenResult"
+              }
+            ],
+            "returns": "void",
+            "lifetime": "call"
+          }
+        },
+        {
+          "context": "textReplaceBetweenResult"
+        }
+      ],
+      "returns": "bool"
+    },
+    {
+      "name": "nativeTextReplaceBetweenAlloc",
+      "symbol": "scrl_api_TextReplaceBetweenAlloc",
+      "params": [
+        "string",
+        "bool",
+        "string",
+        "bool",
+        "string",
+        "bool",
+        "string",
+        "bool",
+        {
+          "callback": {
+            "id": "textReplaceBetweenAllocResult",
+            "params": [
+              "cstring",
+              {
+                "context": "textReplaceBetweenAllocResult"
+              }
+            ],
+            "returns": "void",
+            "lifetime": "call"
+          }
+        },
+        {
+          "context": "textReplaceBetweenAllocResult"
+        }
+      ],
+      "returns": "bool"
+    },
+    {
+      "name": "nativeTextInsert",
+      "symbol": "scrl_api_TextInsert",
+      "params": [
+        "string",
+        "bool",
+        "string",
+        "bool",
+        "i32",
+        {
+          "callback": {
+            "id": "textInsertResult",
+            "params": [
+              "cstring",
+              {
+                "context": "textInsertResult"
+              }
+            ],
+            "returns": "void",
+            "lifetime": "call"
+          }
+        },
+        {
+          "context": "textInsertResult"
+        }
+      ],
+      "returns": "bool"
+    },
+    {
+      "name": "nativeTextInsertAlloc",
+      "symbol": "scrl_api_TextInsertAlloc",
+      "params": [
+        "string",
+        "bool",
+        "string",
+        "bool",
+        "i32",
+        {
+          "callback": {
+            "id": "textInsertAllocResult",
+            "params": [
+              "cstring",
+              {
+                "context": "textInsertAllocResult"
+              }
+            ],
+            "returns": "void",
+            "lifetime": "call"
+          }
+        },
+        {
+          "context": "textInsertAllocResult"
+        }
+      ],
+      "returns": "bool"
+    },
+    {
+      "name": "nativeTextFindIndex",
+      "symbol": "scrl_api_TextFindIndex",
+      "params": [
+        "string",
+        "bool",
+        "string",
+        "bool"
+      ],
+      "returns": "i32"
+    },
+    {
+      "name": "nativeTextToUpper",
+      "symbol": "scrl_api_TextToUpper",
+      "params": [
+        "string",
+        "bool",
+        {
+          "callback": {
+            "id": "textToUpperResult",
+            "params": [
+              "cstring",
+              {
+                "context": "textToUpperResult"
+              }
+            ],
+            "returns": "void",
+            "lifetime": "call"
+          }
+        },
+        {
+          "context": "textToUpperResult"
+        }
+      ],
+      "returns": "bool"
+    },
+    {
+      "name": "nativeTextToLower",
+      "symbol": "scrl_api_TextToLower",
+      "params": [
+        "string",
+        "bool",
+        {
+          "callback": {
+            "id": "textToLowerResult",
+            "params": [
+              "cstring",
+              {
+                "context": "textToLowerResult"
+              }
+            ],
+            "returns": "void",
+            "lifetime": "call"
+          }
+        },
+        {
+          "context": "textToLowerResult"
+        }
+      ],
+      "returns": "bool"
+    },
+    {
+      "name": "nativeTextToPascal",
+      "symbol": "scrl_api_TextToPascal",
+      "params": [
+        "string",
+        "bool",
+        {
+          "callback": {
+            "id": "textToPascalResult",
+            "params": [
+              "cstring",
+              {
+                "context": "textToPascalResult"
+              }
+            ],
+            "returns": "void",
+            "lifetime": "call"
+          }
+        },
+        {
+          "context": "textToPascalResult"
+        }
+      ],
+      "returns": "bool"
+    },
+    {
+      "name": "nativeTextToSnake",
+      "symbol": "scrl_api_TextToSnake",
+      "params": [
+        "string",
+        "bool",
+        {
+          "callback": {
+            "id": "textToSnakeResult",
+            "params": [
+              "cstring",
+              {
+                "context": "textToSnakeResult"
+              }
+            ],
+            "returns": "void",
+            "lifetime": "call"
+          }
+        },
+        {
+          "context": "textToSnakeResult"
+        }
+      ],
+      "returns": "bool"
+    },
+    {
+      "name": "nativeTextToCamel",
+      "symbol": "scrl_api_TextToCamel",
+      "params": [
+        "string",
+        "bool",
+        {
+          "callback": {
+            "id": "textToCamelResult",
+            "params": [
+              "cstring",
+              {
+                "context": "textToCamelResult"
+              }
+            ],
+            "returns": "void",
+            "lifetime": "call"
+          }
+        },
+        {
+          "context": "textToCamelResult"
+        }
+      ],
+      "returns": "bool"
+    },
+    {
+      "name": "nativeTextToInteger",
+      "symbol": "scrl_api_TextToInteger",
+      "params": [
+        "string",
+        "bool"
+      ],
+      "returns": "i32"
+    },
+    {
+      "name": "nativeTextToFloat",
+      "symbol": "scrl_api_TextToFloat",
+      "params": [
+        "string",
+        "bool"
+      ],
+      "returns": "f64"
+    },
+    {
+      "name": "nativeDrawLine3D",
+      "symbol": "scrl_api_DrawLine3D",
+      "params": [
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "u8",
+        "u8",
+        "u8",
+        "u8"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeDrawPoint3D",
+      "symbol": "scrl_api_DrawPoint3D",
+      "params": [
+        "f64",
+        "f64",
+        "f64",
+        "u8",
+        "u8",
+        "u8",
+        "u8"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeDrawCircle3D",
+      "symbol": "scrl_api_DrawCircle3D",
+      "params": [
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "u8",
+        "u8",
+        "u8",
+        "u8"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeDrawTriangle3D",
+      "symbol": "scrl_api_DrawTriangle3D",
+      "params": [
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "u8",
+        "u8",
+        "u8",
+        "u8"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeDrawTriangleStrip3D",
+      "symbol": "scrl_api_DrawTriangleStrip3D",
+      "params": [
+        {
+          "callback": {
+            "id": "points_read",
+            "params": [
+              "i32",
+              "i32",
+              {
+                "context": "points_read"
+              }
+            ],
+            "returns": "f64",
+            "lifetime": "call"
+          }
+        },
+        {
+          "context": "points_read"
+        },
+        "i32",
+        "u8",
+        "u8",
+        "u8",
+        "u8"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeDrawCube",
+      "symbol": "scrl_api_DrawCube",
+      "params": [
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "u8",
+        "u8",
+        "u8",
+        "u8"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeDrawCubeV",
+      "symbol": "scrl_api_DrawCubeV",
+      "params": [
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "u8",
+        "u8",
+        "u8",
+        "u8"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeDrawCubeWires",
+      "symbol": "scrl_api_DrawCubeWires",
+      "params": [
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "u8",
+        "u8",
+        "u8",
+        "u8"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeDrawCubeWiresV",
+      "symbol": "scrl_api_DrawCubeWiresV",
+      "params": [
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "u8",
+        "u8",
+        "u8",
+        "u8"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeDrawSphere",
+      "symbol": "scrl_api_DrawSphere",
+      "params": [
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "u8",
+        "u8",
+        "u8",
+        "u8"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeDrawSphereEx",
+      "symbol": "scrl_api_DrawSphereEx",
+      "params": [
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "i32",
+        "i32",
+        "u8",
+        "u8",
+        "u8",
+        "u8"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeDrawSphereWires",
+      "symbol": "scrl_api_DrawSphereWires",
+      "params": [
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "i32",
+        "i32",
+        "u8",
+        "u8",
+        "u8",
+        "u8"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeDrawCylinder",
+      "symbol": "scrl_api_DrawCylinder",
+      "params": [
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "i32",
+        "u8",
+        "u8",
+        "u8",
+        "u8"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeDrawCylinderEx",
+      "symbol": "scrl_api_DrawCylinderEx",
+      "params": [
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "i32",
+        "u8",
+        "u8",
+        "u8",
+        "u8"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeDrawCylinderWires",
+      "symbol": "scrl_api_DrawCylinderWires",
+      "params": [
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "i32",
+        "u8",
+        "u8",
+        "u8",
+        "u8"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeDrawCylinderWiresEx",
+      "symbol": "scrl_api_DrawCylinderWiresEx",
+      "params": [
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "i32",
+        "u8",
+        "u8",
+        "u8",
+        "u8"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeDrawCapsule",
+      "symbol": "scrl_api_DrawCapsule",
+      "params": [
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "i32",
+        "i32",
+        "u8",
+        "u8",
+        "u8",
+        "u8"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeDrawCapsuleWires",
+      "symbol": "scrl_api_DrawCapsuleWires",
+      "params": [
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "i32",
+        "i32",
+        "u8",
+        "u8",
+        "u8",
+        "u8"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeDrawPlane",
+      "symbol": "scrl_api_DrawPlane",
+      "params": [
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "u8",
+        "u8",
+        "u8",
+        "u8"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeDrawRay",
+      "symbol": "scrl_api_DrawRay",
+      "params": [
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "u8",
+        "u8",
+        "u8",
+        "u8"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeDrawGrid",
+      "symbol": "scrl_api_DrawGrid",
+      "params": [
+        "i32",
+        "f64"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeLoadModel",
+      "symbol": "scrl_api_LoadModel",
+      "params": [
+        "string",
+        "bool"
+      ],
+      "returns": "u32"
+    },
+    {
+      "name": "nativeLoadModelFromMesh",
+      "symbol": "scrl_api_LoadModelFromMesh",
+      "params": [
+        "u32"
+      ],
+      "returns": "u32"
+    },
+    {
+      "name": "nativeIsModelValid",
+      "symbol": "scrl_api_IsModelValid",
+      "params": [
+        "u32"
+      ],
+      "returns": "bool"
+    },
+    {
+      "name": "nativeUnloadModel",
+      "symbol": "scrl_api_UnloadModel",
+      "params": [
+        "u32"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeGetModelBoundingBox",
+      "symbol": "scrl_api_GetModelBoundingBox",
+      "params": [
+        "u32",
+        {
+          "callback": {
+            "id": "getModelBoundingBoxResult",
+            "params": [
+              "f64",
+              "f64",
+              "f64",
+              "f64",
+              "f64",
+              "f64",
+              {
+                "context": "getModelBoundingBoxResult"
+              }
+            ],
+            "returns": "void",
+            "lifetime": "call"
+          }
+        },
+        {
+          "context": "getModelBoundingBoxResult"
+        }
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeDrawModel",
+      "symbol": "scrl_api_DrawModel",
+      "params": [
+        "u32",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "u8",
+        "u8",
+        "u8",
+        "u8"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeDrawModelEx",
+      "symbol": "scrl_api_DrawModelEx",
+      "params": [
+        "u32",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "u8",
+        "u8",
+        "u8",
+        "u8"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeDrawModelWires",
+      "symbol": "scrl_api_DrawModelWires",
+      "params": [
+        "u32",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "u8",
+        "u8",
+        "u8",
+        "u8"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeDrawModelWiresEx",
+      "symbol": "scrl_api_DrawModelWiresEx",
+      "params": [
+        "u32",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "u8",
+        "u8",
+        "u8",
+        "u8"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeDrawBoundingBox",
+      "symbol": "scrl_api_DrawBoundingBox",
+      "params": [
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "u8",
+        "u8",
+        "u8",
+        "u8"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeDrawBillboard",
+      "symbol": "scrl_api_DrawBillboard",
+      "params": [
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "i32",
+        "u32",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "u8",
+        "u8",
+        "u8",
+        "u8"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeDrawBillboardRec",
+      "symbol": "scrl_api_DrawBillboardRec",
+      "params": [
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "i32",
+        "u32",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "u8",
+        "u8",
+        "u8",
+        "u8"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeDrawBillboardPro",
+      "symbol": "scrl_api_DrawBillboardPro",
+      "params": [
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "i32",
+        "u32",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "u8",
+        "u8",
+        "u8",
+        "u8"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeUploadMesh",
+      "symbol": "scrl_api_UploadMesh",
+      "params": [
+        "u32",
+        "bool"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeUpdateMeshBuffer",
+      "symbol": "scrl_api_UpdateMeshBuffer",
+      "params": [
+        "u32",
+        "i32",
+        "bytes",
+        "i32",
+        "i32"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeUnloadMesh",
+      "symbol": "scrl_api_UnloadMesh",
+      "params": [
+        "u32"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeDrawMesh",
+      "symbol": "scrl_api_DrawMesh",
+      "params": [
+        "u32",
+        "u32",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeDrawMeshInstanced",
+      "symbol": "scrl_api_DrawMeshInstanced",
+      "params": [
+        "u32",
+        "u32",
+        {
+          "callback": {
+            "id": "transforms_read",
+            "params": [
+              "i32",
+              "i32",
+              {
+                "context": "transforms_read"
+              }
+            ],
+            "returns": "f64",
+            "lifetime": "call"
+          }
+        },
+        {
+          "context": "transforms_read"
+        },
+        "i32"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeGetMeshBoundingBox",
+      "symbol": "scrl_api_GetMeshBoundingBox",
+      "params": [
+        "u32",
+        {
+          "callback": {
+            "id": "getMeshBoundingBoxResult",
+            "params": [
+              "f64",
+              "f64",
+              "f64",
+              "f64",
+              "f64",
+              "f64",
+              {
+                "context": "getMeshBoundingBoxResult"
+              }
+            ],
+            "returns": "void",
+            "lifetime": "call"
+          }
+        },
+        {
+          "context": "getMeshBoundingBoxResult"
+        }
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeGenMeshTangents",
+      "symbol": "scrl_api_GenMeshTangents",
+      "params": [
+        "u32"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeExportMesh",
+      "symbol": "scrl_api_ExportMesh",
+      "params": [
+        "u32",
+        "string",
+        "bool"
+      ],
+      "returns": "bool"
+    },
+    {
+      "name": "nativeExportMeshAsCode",
+      "symbol": "scrl_api_ExportMeshAsCode",
+      "params": [
+        "u32",
+        "string",
+        "bool"
+      ],
+      "returns": "bool"
+    },
+    {
+      "name": "nativeGenMeshPoly",
+      "symbol": "scrl_api_GenMeshPoly",
+      "params": [
+        "i32",
+        "f64"
+      ],
+      "returns": "u32"
+    },
+    {
+      "name": "nativeGenMeshPlane",
+      "symbol": "scrl_api_GenMeshPlane",
+      "params": [
+        "f64",
+        "f64",
+        "i32",
+        "i32"
+      ],
+      "returns": "u32"
+    },
+    {
+      "name": "nativeGenMeshCube",
+      "symbol": "scrl_api_GenMeshCube",
+      "params": [
+        "f64",
+        "f64",
+        "f64"
+      ],
+      "returns": "u32"
+    },
+    {
+      "name": "nativeGenMeshSphere",
+      "symbol": "scrl_api_GenMeshSphere",
+      "params": [
+        "f64",
+        "i32",
+        "i32"
+      ],
+      "returns": "u32"
+    },
+    {
+      "name": "nativeGenMeshHemiSphere",
+      "symbol": "scrl_api_GenMeshHemiSphere",
+      "params": [
+        "f64",
+        "i32",
+        "i32"
+      ],
+      "returns": "u32"
+    },
+    {
+      "name": "nativeGenMeshCylinder",
+      "symbol": "scrl_api_GenMeshCylinder",
+      "params": [
+        "f64",
+        "f64",
+        "i32"
+      ],
+      "returns": "u32"
+    },
+    {
+      "name": "nativeGenMeshCone",
+      "symbol": "scrl_api_GenMeshCone",
+      "params": [
+        "f64",
+        "f64",
+        "i32"
+      ],
+      "returns": "u32"
+    },
+    {
+      "name": "nativeGenMeshTorus",
+      "symbol": "scrl_api_GenMeshTorus",
+      "params": [
+        "f64",
+        "f64",
+        "i32",
+        "i32"
+      ],
+      "returns": "u32"
+    },
+    {
+      "name": "nativeGenMeshKnot",
+      "symbol": "scrl_api_GenMeshKnot",
+      "params": [
+        "f64",
+        "f64",
+        "i32",
+        "i32"
+      ],
+      "returns": "u32"
+    },
+    {
+      "name": "nativeGenMeshHeightmap",
+      "symbol": "scrl_api_GenMeshHeightmap",
+      "params": [
+        "u32",
+        "f64",
+        "f64",
+        "f64"
+      ],
+      "returns": "u32"
+    },
+    {
+      "name": "nativeGenMeshCubicmap",
+      "symbol": "scrl_api_GenMeshCubicmap",
+      "params": [
+        "u32",
+        "f64",
+        "f64",
+        "f64"
+      ],
+      "returns": "u32"
+    },
+    {
+      "name": "nativeLoadMaterialDefault",
+      "symbol": "scrl_api_LoadMaterialDefault",
+      "params": [],
+      "returns": "u32"
+    },
+    {
+      "name": "nativeIsMaterialValid",
+      "symbol": "scrl_api_IsMaterialValid",
+      "params": [
+        "u32"
+      ],
+      "returns": "bool"
+    },
+    {
+      "name": "nativeUnloadMaterial",
+      "symbol": "scrl_api_UnloadMaterial",
+      "params": [
+        "u32"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeSetMaterialTexture",
+      "symbol": "scrl_api_SetMaterialTexture",
+      "params": [
+        "u32",
+        "i32",
+        "u32"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeSetModelMeshMaterial",
+      "symbol": "scrl_api_SetModelMeshMaterial",
+      "params": [
+        "u32",
+        "i32",
+        "i32"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeUpdateModelAnimation",
+      "symbol": "scrl_api_UpdateModelAnimation",
+      "params": [
+        "u32",
+        "u32",
+        "f64"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeUpdateModelAnimationEx",
+      "symbol": "scrl_api_UpdateModelAnimationEx",
+      "params": [
+        "u32",
+        "u32",
+        "f64",
+        "u32",
+        "f64",
+        "f64"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeUnloadModelAnimations",
+      "symbol": "scrl_api_UnloadModelAnimations",
+      "params": [
+        "u32",
+        "i32"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeIsModelAnimationValid",
+      "symbol": "scrl_api_IsModelAnimationValid",
+      "params": [
+        "u32",
+        "u32"
+      ],
+      "returns": "bool"
+    },
+    {
+      "name": "nativeCheckCollisionSpheres",
+      "symbol": "scrl_api_CheckCollisionSpheres",
+      "params": [
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64"
+      ],
+      "returns": "bool"
+    },
+    {
+      "name": "nativeCheckCollisionBoxes",
+      "symbol": "scrl_api_CheckCollisionBoxes",
+      "params": [
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64"
+      ],
+      "returns": "bool"
+    },
+    {
+      "name": "nativeCheckCollisionBoxSphere",
+      "symbol": "scrl_api_CheckCollisionBoxSphere",
+      "params": [
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64"
+      ],
+      "returns": "bool"
+    },
+    {
+      "name": "nativeGetRayCollisionSphere",
+      "symbol": "scrl_api_GetRayCollisionSphere",
+      "params": [
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        {
+          "callback": {
+            "id": "getRayCollisionSphereResult",
+            "params": [
+              "bool",
+              "f64",
+              "f64",
+              "f64",
+              "f64",
+              "f64",
+              "f64",
+              "f64",
+              {
+                "context": "getRayCollisionSphereResult"
+              }
+            ],
+            "returns": "void",
+            "lifetime": "call"
+          }
+        },
+        {
+          "context": "getRayCollisionSphereResult"
+        }
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeGetRayCollisionBox",
+      "symbol": "scrl_api_GetRayCollisionBox",
+      "params": [
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        {
+          "callback": {
+            "id": "getRayCollisionBoxResult",
+            "params": [
+              "bool",
+              "f64",
+              "f64",
+              "f64",
+              "f64",
+              "f64",
+              "f64",
+              "f64",
+              {
+                "context": "getRayCollisionBoxResult"
+              }
+            ],
+            "returns": "void",
+            "lifetime": "call"
+          }
+        },
+        {
+          "context": "getRayCollisionBoxResult"
+        }
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeGetRayCollisionMesh",
+      "symbol": "scrl_api_GetRayCollisionMesh",
+      "params": [
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "u32",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        {
+          "callback": {
+            "id": "getRayCollisionMeshResult",
+            "params": [
+              "bool",
+              "f64",
+              "f64",
+              "f64",
+              "f64",
+              "f64",
+              "f64",
+              "f64",
+              {
+                "context": "getRayCollisionMeshResult"
+              }
+            ],
+            "returns": "void",
+            "lifetime": "call"
+          }
+        },
+        {
+          "context": "getRayCollisionMeshResult"
+        }
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeGetRayCollisionTriangle",
+      "symbol": "scrl_api_GetRayCollisionTriangle",
+      "params": [
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        {
+          "callback": {
+            "id": "getRayCollisionTriangleResult",
+            "params": [
+              "bool",
+              "f64",
+              "f64",
+              "f64",
+              "f64",
+              "f64",
+              "f64",
+              "f64",
+              {
+                "context": "getRayCollisionTriangleResult"
+              }
+            ],
+            "returns": "void",
+            "lifetime": "call"
+          }
+        },
+        {
+          "context": "getRayCollisionTriangleResult"
+        }
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeGetRayCollisionQuad",
+      "symbol": "scrl_api_GetRayCollisionQuad",
+      "params": [
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        {
+          "callback": {
+            "id": "getRayCollisionQuadResult",
+            "params": [
+              "bool",
+              "f64",
+              "f64",
+              "f64",
+              "f64",
+              "f64",
+              "f64",
+              "f64",
+              {
+                "context": "getRayCollisionQuadResult"
+              }
+            ],
+            "returns": "void",
+            "lifetime": "call"
+          }
+        },
+        {
+          "context": "getRayCollisionQuadResult"
+        }
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeInitAudioDevice",
+      "symbol": "scrl_api_InitAudioDevice",
+      "params": [],
+      "returns": "void"
+    },
+    {
+      "name": "nativeCloseAudioDevice",
+      "symbol": "scrl_api_CloseAudioDevice",
+      "params": [],
+      "returns": "void"
+    },
+    {
+      "name": "nativeIsAudioDeviceReady",
+      "symbol": "scrl_api_IsAudioDeviceReady",
+      "params": [],
+      "returns": "bool"
+    },
+    {
+      "name": "nativeSetMasterVolume",
+      "symbol": "scrl_api_SetMasterVolume",
+      "params": [
+        "f64"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeGetMasterVolume",
+      "symbol": "scrl_api_GetMasterVolume",
+      "params": [],
+      "returns": "f64"
+    },
+    {
+      "name": "nativeLoadWave",
+      "symbol": "scrl_api_LoadWave",
+      "params": [
+        "string",
+        "bool"
+      ],
+      "returns": "u32"
+    },
+    {
+      "name": "nativeLoadWaveFromMemory",
+      "symbol": "scrl_api_LoadWaveFromMemory",
+      "params": [
+        "string",
+        "bool",
+        "bytes",
+        "i32"
+      ],
+      "returns": "u32"
+    },
+    {
+      "name": "nativeIsWaveValid",
+      "symbol": "scrl_api_IsWaveValid",
+      "params": [
+        "u32"
+      ],
+      "returns": "bool"
+    },
+    {
+      "name": "nativeLoadSound",
+      "symbol": "scrl_api_LoadSound",
+      "params": [
+        "string",
+        "bool"
+      ],
+      "returns": "u32"
+    },
+    {
+      "name": "nativeLoadSoundFromWave",
+      "symbol": "scrl_api_LoadSoundFromWave",
+      "params": [
+        "u32"
+      ],
+      "returns": "u32"
+    },
+    {
+      "name": "nativeLoadSoundAlias",
+      "symbol": "scrl_api_LoadSoundAlias",
+      "params": [
+        "u32"
+      ],
+      "returns": "u32"
+    },
+    {
+      "name": "nativeIsSoundValid",
+      "symbol": "scrl_api_IsSoundValid",
+      "params": [
+        "u32"
+      ],
+      "returns": "bool"
+    },
+    {
+      "name": "nativeUpdateSound",
+      "symbol": "scrl_api_UpdateSound",
+      "params": [
+        "u32",
+        "bytes",
+        "i32"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeUnloadWave",
+      "symbol": "scrl_api_UnloadWave",
+      "params": [
+        "u32"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeUnloadSound",
+      "symbol": "scrl_api_UnloadSound",
+      "params": [
+        "u32"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeUnloadSoundAlias",
+      "symbol": "scrl_api_UnloadSoundAlias",
+      "params": [
+        "u32"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeExportWave",
+      "symbol": "scrl_api_ExportWave",
+      "params": [
+        "u32",
+        "string",
+        "bool"
+      ],
+      "returns": "bool"
+    },
+    {
+      "name": "nativeExportWaveAsCode",
+      "symbol": "scrl_api_ExportWaveAsCode",
+      "params": [
+        "u32",
+        "string",
+        "bool"
+      ],
+      "returns": "bool"
+    },
+    {
+      "name": "nativePlaySound",
+      "symbol": "scrl_api_PlaySound",
+      "params": [
+        "u32"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeStopSound",
+      "symbol": "scrl_api_StopSound",
+      "params": [
+        "u32"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativePauseSound",
+      "symbol": "scrl_api_PauseSound",
+      "params": [
+        "u32"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeResumeSound",
+      "symbol": "scrl_api_ResumeSound",
+      "params": [
+        "u32"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeIsSoundPlaying",
+      "symbol": "scrl_api_IsSoundPlaying",
+      "params": [
+        "u32"
+      ],
+      "returns": "bool"
+    },
+    {
+      "name": "nativeSetSoundVolume",
+      "symbol": "scrl_api_SetSoundVolume",
+      "params": [
+        "u32",
+        "f64"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeSetSoundPitch",
+      "symbol": "scrl_api_SetSoundPitch",
+      "params": [
+        "u32",
+        "f64"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeSetSoundPan",
+      "symbol": "scrl_api_SetSoundPan",
+      "params": [
+        "u32",
+        "f64"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeWaveCopy",
+      "symbol": "scrl_api_WaveCopy",
+      "params": [
+        "u32"
+      ],
+      "returns": "u32"
+    },
+    {
+      "name": "nativeWaveCrop",
+      "symbol": "scrl_api_WaveCrop",
+      "params": [
+        "u32",
+        "i32",
+        "i32"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeWaveFormat",
+      "symbol": "scrl_api_WaveFormat",
+      "params": [
+        "u32",
+        "i32",
+        "i32",
+        "i32"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeLoadMusicStream",
+      "symbol": "scrl_api_LoadMusicStream",
+      "params": [
+        "string",
+        "bool"
+      ],
+      "returns": "u32"
+    },
+    {
+      "name": "nativeLoadMusicStreamFromMemory",
+      "symbol": "scrl_api_LoadMusicStreamFromMemory",
+      "params": [
+        "string",
+        "bool",
+        "bytes",
+        "i32"
+      ],
+      "returns": "u32"
+    },
+    {
+      "name": "nativeIsMusicValid",
+      "symbol": "scrl_api_IsMusicValid",
+      "params": [
+        "u32"
+      ],
+      "returns": "bool"
+    },
+    {
+      "name": "nativeUnloadMusicStream",
+      "symbol": "scrl_api_UnloadMusicStream",
+      "params": [
+        "u32"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativePlayMusicStream",
+      "symbol": "scrl_api_PlayMusicStream",
+      "params": [
+        "u32"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeIsMusicStreamPlaying",
+      "symbol": "scrl_api_IsMusicStreamPlaying",
+      "params": [
+        "u32"
+      ],
+      "returns": "bool"
+    },
+    {
+      "name": "nativeUpdateMusicStream",
+      "symbol": "scrl_api_UpdateMusicStream",
+      "params": [
+        "u32"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeStopMusicStream",
+      "symbol": "scrl_api_StopMusicStream",
+      "params": [
+        "u32"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativePauseMusicStream",
+      "symbol": "scrl_api_PauseMusicStream",
+      "params": [
+        "u32"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeResumeMusicStream",
+      "symbol": "scrl_api_ResumeMusicStream",
+      "params": [
+        "u32"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeSeekMusicStream",
+      "symbol": "scrl_api_SeekMusicStream",
+      "params": [
+        "u32",
+        "f64"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeSetMusicVolume",
+      "symbol": "scrl_api_SetMusicVolume",
+      "params": [
+        "u32",
+        "f64"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeSetMusicPitch",
+      "symbol": "scrl_api_SetMusicPitch",
+      "params": [
+        "u32",
+        "f64"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeSetMusicPan",
+      "symbol": "scrl_api_SetMusicPan",
+      "params": [
+        "u32",
+        "f64"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeGetMusicTimeLength",
+      "symbol": "scrl_api_GetMusicTimeLength",
+      "params": [
+        "u32"
+      ],
+      "returns": "f64"
+    },
+    {
+      "name": "nativeGetMusicTimePlayed",
+      "symbol": "scrl_api_GetMusicTimePlayed",
+      "params": [
+        "u32"
+      ],
+      "returns": "f64"
+    },
+    {
+      "name": "nativeLoadAudioStream",
+      "symbol": "scrl_api_LoadAudioStream",
+      "params": [
+        "u32",
+        "u32",
+        "u32"
+      ],
+      "returns": "u32"
+    },
+    {
+      "name": "nativeIsAudioStreamValid",
+      "symbol": "scrl_api_IsAudioStreamValid",
+      "params": [
+        "u32"
+      ],
+      "returns": "bool"
+    },
+    {
+      "name": "nativeUnloadAudioStream",
+      "symbol": "scrl_api_UnloadAudioStream",
+      "params": [
+        "u32"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeUpdateAudioStream",
+      "symbol": "scrl_api_UpdateAudioStream",
+      "params": [
+        "u32",
+        "bytes",
+        "i32"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeIsAudioStreamProcessed",
+      "symbol": "scrl_api_IsAudioStreamProcessed",
+      "params": [
+        "u32"
+      ],
+      "returns": "bool"
+    },
+    {
+      "name": "nativePlayAudioStream",
+      "symbol": "scrl_api_PlayAudioStream",
+      "params": [
+        "u32"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativePauseAudioStream",
+      "symbol": "scrl_api_PauseAudioStream",
+      "params": [
+        "u32"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeResumeAudioStream",
+      "symbol": "scrl_api_ResumeAudioStream",
+      "params": [
+        "u32"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeIsAudioStreamPlaying",
+      "symbol": "scrl_api_IsAudioStreamPlaying",
+      "params": [
+        "u32"
+      ],
+      "returns": "bool"
+    },
+    {
+      "name": "nativeStopAudioStream",
+      "symbol": "scrl_api_StopAudioStream",
+      "params": [
+        "u32"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeSetAudioStreamVolume",
+      "symbol": "scrl_api_SetAudioStreamVolume",
+      "params": [
+        "u32",
+        "f64"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeSetAudioStreamPitch",
+      "symbol": "scrl_api_SetAudioStreamPitch",
+      "params": [
+        "u32",
+        "f64"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeSetAudioStreamPan",
+      "symbol": "scrl_api_SetAudioStreamPan",
+      "params": [
+        "u32",
+        "f64"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeSetAudioStreamBufferSizeDefault",
+      "symbol": "scrl_api_SetAudioStreamBufferSizeDefault",
+      "params": [
+        "i32"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeTraceLogText",
+      "symbol": "scrl_trace_log_text",
+      "params": [
+        "i32",
+        "string"
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeLoadFileDataCopy",
+      "symbol": "scrl_custom_load_file_data",
+      "params": [
+        "string",
+        "bool",
+        {
+          "callback": {
+            "id": "data",
+            "params": [
+              "bytes",
+              {
+                "context": "data"
+              }
+            ],
+            "returns": "void",
+            "lifetime": "call"
+          }
+        },
+        {
+          "context": "data"
+        }
+      ],
+      "returns": "bool"
+    },
+    {
+      "name": "nativeCompressDataCopy",
+      "symbol": "scrl_custom_compress_data",
+      "params": [
+        "bytes",
+        "i32",
+        {
+          "callback": {
+            "id": "result",
+            "params": [
+              "bytes",
+              {
+                "context": "result"
+              }
+            ],
+            "returns": "void",
+            "lifetime": "call"
+          }
+        },
+        {
+          "context": "result"
+        }
+      ],
+      "returns": "bool"
+    },
+    {
+      "name": "nativeDecompressDataCopy",
+      "symbol": "scrl_custom_decompress_data",
+      "params": [
+        "bytes",
+        "i32",
+        {
+          "callback": {
+            "id": "result",
+            "params": [
+              "bytes",
+              {
+                "context": "result"
+              }
+            ],
+            "returns": "void",
+            "lifetime": "call"
+          }
+        },
+        {
+          "context": "result"
+        }
+      ],
+      "returns": "bool"
+    },
+    {
+      "name": "nativeEncodeDataBase64Copy",
+      "symbol": "scrl_custom_encode_base64",
+      "params": [
+        "bytes",
+        "i32",
+        {
+          "callback": {
+            "id": "result",
+            "params": [
+              "string",
+              {
+                "context": "result"
+              }
+            ],
+            "returns": "void",
+            "lifetime": "call"
+          }
+        },
+        {
+          "context": "result"
+        }
+      ],
+      "returns": "bool"
+    },
+    {
+      "name": "nativeDecodeDataBase64Copy",
+      "symbol": "scrl_custom_decode_base64",
+      "params": [
+        "string",
+        "bool",
+        {
+          "callback": {
+            "id": "result",
+            "params": [
+              "bytes",
+              {
+                "context": "result"
+              }
+            ],
+            "returns": "void",
+            "lifetime": "call"
+          }
+        },
+        {
+          "context": "result"
+        }
+      ],
+      "returns": "bool"
+    },
+    {
+      "name": "nativeComputeMD5",
+      "symbol": "scrl_custom_compute_md5",
+      "params": [
+        "bytes",
+        "i32",
+        {
+          "callback": {
+            "id": "word",
+            "params": [
+              "i32",
+              "u32",
+              {
+                "context": "word"
+              }
+            ],
+            "returns": "void",
+            "lifetime": "call"
+          }
+        },
+        {
+          "context": "word"
+        }
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeComputeSHA1",
+      "symbol": "scrl_custom_compute_sha1",
+      "params": [
+        "bytes",
+        "i32",
+        {
+          "callback": {
+            "id": "word",
+            "params": [
+              "i32",
+              "u32",
+              {
+                "context": "word"
+              }
+            ],
+            "returns": "void",
+            "lifetime": "call"
+          }
+        },
+        {
+          "context": "word"
+        }
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeComputeSHA256",
+      "symbol": "scrl_custom_compute_sha256",
+      "params": [
+        "bytes",
+        "i32",
+        {
+          "callback": {
+            "id": "word",
+            "params": [
+              "i32",
+              "u32",
+              {
+                "context": "word"
+              }
+            ],
+            "returns": "void",
+            "lifetime": "call"
+          }
+        },
+        {
+          "context": "word"
+        }
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeLoadRandomSequenceCopy",
+      "symbol": "scrl_custom_random_sequence",
+      "params": [
+        "u32",
+        "i32",
+        "i32",
+        {
+          "callback": {
+            "id": "item",
+            "params": [
+              "i32",
+              "i32",
+              {
+                "context": "item"
+              }
+            ],
+            "returns": "void",
+            "lifetime": "call"
+          }
+        },
+        {
+          "context": "item"
+        }
+      ],
+      "returns": "bool"
+    },
+    {
+      "name": "nativeExportImageToMemoryCopy",
+      "symbol": "scrl_custom_export_image_memory",
+      "params": [
+        "u32",
+        "string",
+        "bool",
+        {
+          "callback": {
+            "id": "data",
+            "params": [
+              "bytes",
+              {
+                "context": "data"
+              }
+            ],
+            "returns": "void",
+            "lifetime": "call"
+          }
+        },
+        {
+          "context": "data"
+        }
+      ],
+      "returns": "bool"
+    },
+    {
+      "name": "nativeLoadImageColorsCopy",
+      "symbol": "scrl_custom_image_colors",
+      "params": [
+        "u32",
+        {
+          "callback": {
+            "id": "color",
+            "params": [
+              "u8",
+              "u8",
+              "u8",
+              "u8",
+              {
+                "context": "color"
+              }
+            ],
+            "returns": "void",
+            "lifetime": "call"
+          }
+        },
+        {
+          "context": "color"
+        }
+      ],
+      "returns": "bool"
+    },
+    {
+      "name": "nativeLoadImagePaletteCopy",
+      "symbol": "scrl_custom_image_palette",
+      "params": [
+        "u32",
+        "i32",
+        {
+          "callback": {
+            "id": "color",
+            "params": [
+              "u8",
+              "u8",
+              "u8",
+              "u8",
+              {
+                "context": "color"
+              }
+            ],
+            "returns": "void",
+            "lifetime": "call"
+          }
+        },
+        {
+          "context": "color"
+        }
+      ],
+      "returns": "bool"
+    },
+    {
+      "name": "nativeLoadCodepointsCopy",
+      "symbol": "scrl_custom_load_codepoints",
+      "params": [
+        "string",
+        "bool",
+        {
+          "callback": {
+            "id": "codepoint",
+            "params": [
+              "i32",
+              "i32",
+              {
+                "context": "codepoint"
+              }
+            ],
+            "returns": "void",
+            "lifetime": "call"
+          }
+        },
+        {
+          "context": "codepoint"
+        }
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeCodepointToUTF8Copy",
+      "symbol": "scrl_custom_codepoint_utf8",
+      "params": [
+        "i32",
+        {
+          "callback": {
+            "id": "text",
+            "params": [
+              "string",
+              {
+                "context": "text"
+              }
+            ],
+            "returns": "void",
+            "lifetime": "call"
+          }
+        },
+        {
+          "context": "text"
+        }
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeLoadTextLinesCopy",
+      "symbol": "scrl_custom_text_lines",
+      "params": [
+        "string",
+        "bool",
+        {
+          "callback": {
+            "id": "line",
+            "params": [
+              "i32",
+              "cstring",
+              {
+                "context": "line"
+              }
+            ],
+            "returns": "void",
+            "lifetime": "call"
+          }
+        },
+        {
+          "context": "line"
+        }
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeTextSplitCopy",
+      "symbol": "scrl_custom_text_split",
+      "params": [
+        "string",
+        "bool",
+        "string",
+        {
+          "callback": {
+            "id": "part",
+            "params": [
+              "i32",
+              "cstring",
+              {
+                "context": "part"
+              }
+            ],
+            "returns": "void",
+            "lifetime": "call"
+          }
+        },
+        {
+          "context": "part"
+        }
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeLoadWaveSamplesCopy",
+      "symbol": "scrl_custom_wave_samples",
+      "params": [
+        "u32",
+        {
+          "callback": {
+            "id": "sample",
+            "params": [
+              "i32",
+              "f64",
+              {
+                "context": "sample"
+              }
+            ],
+            "returns": "void",
+            "lifetime": "call"
+          }
+        },
+        {
+          "context": "sample"
+        }
+      ],
+      "returns": "bool"
+    },
+    {
+      "name": "nativeGetPixelColorCopy",
+      "symbol": "scrl_custom_get_pixel_color",
+      "params": [
+        "bytes",
+        "i32",
+        {
+          "callback": {
+            "id": "color",
+            "params": [
+              "u8",
+              "u8",
+              "u8",
+              "u8",
+              {
+                "context": "color"
+              }
+            ],
+            "returns": "void",
+            "lifetime": "call"
+          }
+        },
+        {
+          "context": "color"
+        }
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeSetPixelColorCopy",
+      "symbol": "scrl_custom_set_pixel_color",
+      "params": [
+        "bytes",
+        "u8",
+        "u8",
+        "u8",
+        "u8",
+        "i32",
+        {
+          "callback": {
+            "id": "data",
+            "params": [
+              "bytes",
+              {
+                "context": "data"
+              }
+            ],
+            "returns": "void",
+            "lifetime": "call"
+          }
+        },
+        {
+          "context": "data"
+        }
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeSetWindowIconsCopy",
+      "symbol": "scrl_custom_set_window_icons",
+      "params": [
+        "i32",
+        {
+          "callback": {
+            "id": "image",
+            "params": [
+              "i32",
+              {
+                "context": "image"
+              }
+            ],
+            "returns": "u32",
+            "lifetime": "call"
+          }
+        },
+        {
+          "context": "image"
+        }
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeUpdateCameraCopy",
+      "symbol": "scrl_custom_update_camera",
+      "params": [
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "i32",
+        "i32",
+        {
+          "callback": {
+            "id": "camera",
+            "params": [
+              "f64",
+              "f64",
+              "f64",
+              "f64",
+              "f64",
+              "f64",
+              "f64",
+              "f64",
+              "f64",
+              "f64",
+              "i32",
+              {
+                "context": "camera"
+              }
+            ],
+            "returns": "void",
+            "lifetime": "call"
+          }
+        },
+        {
+          "context": "camera"
+        }
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeUpdateCameraProCopy",
+      "symbol": "scrl_custom_update_camera_pro",
+      "params": [
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "i32",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        {
+          "callback": {
+            "id": "camera",
+            "params": [
+              "f64",
+              "f64",
+              "f64",
+              "f64",
+              "f64",
+              "f64",
+              "f64",
+              "f64",
+              "f64",
+              "f64",
+              "i32",
+              {
+                "context": "camera"
+              }
+            ],
+            "returns": "void",
+            "lifetime": "call"
+          }
+        },
+        {
+          "context": "camera"
+        }
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeCheckCollisionLinesCopy",
+      "symbol": "scrl_custom_collision_lines",
+      "params": [
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        "f64",
+        {
+          "callback": {
+            "id": "result",
+            "params": [
+              "bool",
+              "f64",
+              "f64",
+              {
+                "context": "result"
+              }
+            ],
+            "returns": "void",
+            "lifetime": "call"
+          }
+        },
+        {
+          "context": "result"
+        }
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeLoadImageAnimCopy",
+      "symbol": "scrl_custom_load_image_anim",
+      "params": [
+        "string",
+        "bool",
+        {
+          "callback": {
+            "id": "result",
+            "params": [
+              "u32",
+              "i32",
+              {
+                "context": "result"
+              }
+            ],
+            "returns": "void",
+            "lifetime": "call"
+          }
+        },
+        {
+          "context": "result"
+        }
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeLoadImageAnimFromMemoryCopy",
+      "symbol": "scrl_custom_load_image_anim_memory",
+      "params": [
+        "string",
+        "bool",
+        "bytes",
+        "i32",
+        {
+          "callback": {
+            "id": "result",
+            "params": [
+              "u32",
+              "i32",
+              {
+                "context": "result"
+              }
+            ],
+            "returns": "void",
+            "lifetime": "call"
+          }
+        },
+        {
+          "context": "result"
+        }
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeGetCodepointCopy",
+      "symbol": "scrl_custom_get_codepoint",
+      "params": [
+        "string",
+        "bool",
+        {
+          "callback": {
+            "id": "result",
+            "params": [
+              "i32",
+              "i32",
+              {
+                "context": "result"
+              }
+            ],
+            "returns": "void",
+            "lifetime": "call"
+          }
+        },
+        {
+          "context": "result"
+        }
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeGetCodepointNextCopy",
+      "symbol": "scrl_custom_get_codepoint_next",
+      "params": [
+        "string",
+        "bool",
+        {
+          "callback": {
+            "id": "result",
+            "params": [
+              "i32",
+              "i32",
+              {
+                "context": "result"
+              }
+            ],
+            "returns": "void",
+            "lifetime": "call"
+          }
+        },
+        {
+          "context": "result"
+        }
+      ],
+      "returns": "void"
+    },
+    {
+      "name": "nativeGetCodepointPreviousCopy",
+      "symbol": "scrl_custom_get_codepoint_previous",
+      "params": [
+        "string",
+        "bool",
+        {
+          "callback": {
+            "id": "result",
+            "params": [
+              "i32",
+              "i32",
+              {
+                "context": "result"
+              }
+            ],
+            "returns": "void",
+            "lifetime": "call"
+          }
+        },
+        {
+          "context": "result"
+        }
+      ],
+      "returns": "void"
+    }
+  ],
+  "libraries": [],
+  "system_libraries": []
+}

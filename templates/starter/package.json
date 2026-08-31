@@ -1,0 +1,15 @@
+{
+  "name": "{{PROJECT_NAME}}",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "scriptc-raylib build src/main.ts -o build/game",
+    "dev": "scriptc-raylib run src/main.ts --dev",
+    "coverage": "scriptc-raylib coverage src/main.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "scriptc-raylib": "^{{PACKAGE_VERSION}}"
+  }
+}
