@@ -21,10 +21,8 @@ const sharedEnvironment = {
 };
 
 function run(command, args, options = {}) {
-  const executable = process.platform === "win32" && (command === "npm" || command === "npx")
-    ? `${command}.cmd`
-    : command;
-  const result = spawnSync(executable, args, {
+  const invocation = resolveInvocation(command, args);
+  const result = spawnSync(invocation.executable, invocation.args, {
     cwd: options.cwd ?? fixtureDir,
     env: sharedEnvironment,
     encoding: options.capture ? "utf8" : undefined,
@@ -36,6 +34,20 @@ function run(command, args, options = {}) {
     throw new Error(`${command} failed with status ${result.status}.\n${output}`);
   }
   return result;
+}
+
+function resolveInvocation(command, args) {
+  if (process.platform !== "win32" || (command !== "npm" && command !== "npx")) {
+    return { executable: command, args };
+  }
+
+  const npmCli = process.env.npm_execpath;
+  if (!npmCli) {
+    throw new Error("npm_execpath is unavailable; run this test through npm test on Windows");
+  }
+  const cli = command === "npm" ? npmCli : join(dirname(npmCli), "npx-cli.js");
+  if (!existsSync(cli)) throw new Error(`Could not locate the ${command} CLI at ${cli}`);
+  return { executable: process.execPath, args: [cli, ...args] };
 }
 
 try {
@@ -110,9 +122,12 @@ console.log(` + "`package-ok ${blackValue(background)} ${restored.length}`" + `)
   }
   const scaffoldMain = readFileSync(join(scaffoldDir, "src", "main.ts"), "utf8");
   if (!scaffoldMain.includes('from "scriptc-raylib"')) throw new Error("created game does not import scriptc-raylib");
+  const overwriteInvocation = resolveInvocation("npx", [
+    "--no-install", "scriptc-raylib", "create", "created-game", "--no-install",
+  ]);
   const overwrite = spawnSync(
-    process.platform === "win32" ? "npx.cmd" : "npx",
-    ["--no-install", "scriptc-raylib", "create", "created-game", "--no-install"],
+    overwriteInvocation.executable,
+    overwriteInvocation.args,
     { cwd: fixtureDir, env: sharedEnvironment, encoding: "utf8" },
   );
   const overwriteOutput = `${overwrite.stdout ?? ""}${overwrite.stderr ?? ""}`;
