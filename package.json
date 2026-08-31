@@ -1,6 +1,6 @@
 {
   "name": "scriptc-raylib",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Static native raylib bindings for TypeScript applications compiled with scriptc",
   "homepage": "https://github.com/gccody/scriptc-raylib#readme",
   "bugs": {
